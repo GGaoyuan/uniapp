@@ -3,7 +3,7 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "aaa"
+				"navigationBarTitleText": "aaabbb"
 			}
 		},
 		{
@@ -34,22 +34,37 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"uniIdRouter": {},
+	"uniIdRouter": {
+		
+	},
 	"tabBar": {
 		"color": "#7A7E83",
 		"selectedColor": "#086d5b",
 		"backgroundColor": "#ffffff",
-		"list": [{
-				"pagePath": "pages/index/index"
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/image/tabbar_icon.png",
+				"selectedIconPath": "static/image/tabbar_icon_sel.png",
+				"text": "首页"
 			},
 			{
-				"pagePath": "pages/review/review"
+				"pagePath": "pages/review/review",
+				"iconPath": "static/image/tabbar_icon.png",
+				"selectedIconPath": "static/image/tabbar_icon_sel.png",
+				"text": "车辆审核"
 			},
 			{
-				"pagePath": "pages/scan/scan"
+				"pagePath": "pages/scan/scan",
+				"iconPath": "static/image/tabbar_icon.png",
+				"selectedIconPath": "static/image/tabbar_icon_sel.png",
+				"text": "扫一扫"
 			},
 			{
-				"pagePath": "pages/appeal/appeal"
+				"pagePath": "pages/appeal/appeal",
+				"iconPath": "static/image/tabbar_icon.png",
+				"selectedIconPath": "static/image/tabbar_icon_sel.png",
+				"text": "违章申诉"
 			}
 		]
 	}
