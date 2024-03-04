@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/review/review",
+    "pages/scan/scan",
+    "pages/appeal/appeal"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "HostApp",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#086d5b",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index"
+      },
+      {
+        "pagePath": "pages/review/review"
+      },
+      {
+        "pagePath": "pages/scan/scan"
+      },
+      {
+        "pagePath": "pages/appeal/appeal"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
