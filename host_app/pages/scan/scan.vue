@@ -1,12 +1,36 @@
 <template>
-	<view>
 		<view class="container-area">
 			<view class="test1">A</view>
-			<view class="test2">B</view>
+			<uni-list :border="true">
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+				<text>AAAAAA</text>
+			</uni-list>
 			<view class="test3">C</view>
 		</view>
-	</view>
+		
 </template>
+
 
 
 <script>
@@ -35,19 +59,27 @@
 	.container-area {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		
-		.test1 {
-			background-color: red;
-		}
+		margin-top: 101rpx;
+		margin-bottom: 101rpx;
+		//height: 900rpx;
+		background-color: blue;
+	}
 
-		.test2 {
-			background-color: blue;
-		}
+	.test1 {
+		position: absolute;
+		top: 0rpx;
+		left: 0rpx;
+		right: 0rpx;
+		height: 100rpx;
+		background-color: red;
+	}
 
-		.test3 {
-			background-color: yellow;
-		}
+	.test3 {
+		position: absolute;
+		left: 0rpx;
+		right: 0rpx;
+		bottom: 0rpx;
+		height: 100rpx;
+		background-color: yellow;
 	}
 </style>
