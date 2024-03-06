@@ -6,7 +6,6 @@
 		</view>
 
 		<uni-list v-if="dataSource.length != 0" :border="true">
-			
 			<view class="review-student-info" v-for="(userinfo, index) in dataSource" :key="index">
 				<view class="top-area">
 					<text class="moto">motoType</text>

@@ -1,53 +1,53 @@
 <template>
-	<view class>
-		<view  v-if="true" class="no-data">
-			<image class="no-data-image" src="/static/logo.png"></image>
-			<text class="no-data-title">bbbbb</text>
+	<view>
+		<view class="container-area">
+			<view class="test1">A</view>
+			<view class="test2">B</view>
+			<view class="test3">C</view>
 		</view>
 	</view>
 </template>
 
+
 <script>
 	export default {
+		components: {},
 		data() {
 			return {
-				
+
 			}
+		},
+		onLoad() {
+
+		},
+		onReady() {
+
 		},
 		methods: {
 
-		}
+		},
 	}
 </script>
 
+
+
 <style lang="scss">
-	// .container {
-	// 	display: flex;
-	// 	flex-direction: column;
-	// 	align-items: center;
-	// 	justify-content: center;
-	// 	background-color: red
-	// }
-	
-	.no-data {
+	.container-area {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		
-		.no-data-image {
-			display: flex;
-			flex-direction: column;
-			height: 200rpx;
-			width: 200rpx;
-			margin-top: 200rpx;
+		.test1 {
+			background-color: red;
 		}
 
-		.no-data-title {
-			display: flex;
-			flex-direction: column;
-			font-size: 36rpx;
-			color: #800f94;
+		.test2 {
+			background-color: blue;
+		}
+
+		.test3 {
+			background-color: yellow;
 		}
 	}
 </style>

@@ -24,23 +24,19 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.no-data {
+.container-area {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.no-data .no-data-image {
-  display: flex;
-  flex-direction: column;
-  height: 200rpx;
-  width: 200rpx;
-  margin-top: 200rpx;
+.container-area .test1 {
+  background-color: red;
 }
-.no-data .no-data-title {
-  display: flex;
-  flex-direction: column;
-  font-size: 36rpx;
-  color: #800f94;
+.container-area .test2 {
+  background-color: blue;
+}
+.container-area .test3 {
+  background-color: yellow;
 }
 

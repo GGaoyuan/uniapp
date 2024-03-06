@@ -1,1 +1,1 @@
-<view><block wx:if="{{true}}"><view class="no-data"><image class="no-data-image" src="/static/logo.png"></image><text class="no-data-title">bbbbb</text></view></block></view>
+<view><view class="container-area"><view class="test1">A</view><view class="test2">B</view><view class="test3">C</view></view></view>
