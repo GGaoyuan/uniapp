@@ -103,15 +103,6 @@ try {
     uniList: function () {
       return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list/uni-list */ "uni_modules/uni-list/components/uni-list/uni-list").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list/uni-list.vue */ 124))
     },
-    uniListChat: function () {
-      return Promise.all(/*! import() | uni_modules/uni-list/components/uni-list-chat/uni-list-chat */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-list/components/uni-list-chat/uni-list-chat")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list-chat/uni-list-chat.vue */ 75))
-    },
-    uniIcons: function () {
-      return Promise.all(/*! import() | uni_modules/uni-icons/components/uni-icons/uni-icons */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-icons/components/uni-icons/uni-icons")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-icons/components/uni-icons/uni-icons.vue */ 94))
-    },
-    uniListItem: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list-item/uni-list-item */ "uni_modules/uni-list/components/uni-list-item/uni-list-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue */ 102))
-    },
   }
 } catch (e) {
   if (
@@ -134,6 +125,17 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  var g0 = _vm.dataSource.length
+  var g1 = _vm.dataSource.length
+  _vm.$mp.data = Object.assign(
+    {},
+    {
+      $root: {
+        g0: g0,
+        g1: g1,
+      },
+    }
+  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -224,35 +226,6 @@ var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/run
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var Person = /*#__PURE__*/(0, _createClass2.default)(function Person(name) {
   (0, _classCallCheck2.default)(this, Person);
   (0, _defineProperty2.default)(this, "name", void 0);
@@ -263,14 +236,7 @@ var _default = {
   components: {},
   data: function data() {
     return {
-      dataSource: dataSource,
-      avatarList: [{
-        url: 'https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png'
-      }, {
-        url: 'https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png'
-      }, {
-        url: 'https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png'
-      }]
+      dataSource: dataSource
     };
   },
   onLoad: function onLoad() {

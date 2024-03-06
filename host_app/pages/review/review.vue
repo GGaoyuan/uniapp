@@ -1,42 +1,13 @@
 <template>
 	<view>
-		
-		<uni-list :border="true">
-			<!-- 显示圆形头像 -->
-			<uni-list-chat :avatar-circle="true" title="uni-app"
-				avatar="https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png" note="您收到一条新的消息1"
-				time="2020-02-02 20:20"></uni-list-chat>
-			<!-- 右侧带角标 -->
-			<uni-list-chat title="uni-app" avatar="https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png"
-				note="您收到一条新的消息2" time="2020-02-02 20:20" badge-text="12"></uni-list-chat>
-			<!-- 头像显示圆点 -->
-			<uni-list-chat title="uni-app" avatar="https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png"
-				note="您收到一条新的消息3" time="2020-02-02 20:20" badge-positon="left" badge-text="dot"></uni-list-chat>
-			<!-- 头像显示角标 -->
-			<uni-list-chat title="uni-app" avatar="https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png"
-				note="您收到一条新的消息4" time="2020-02-02 20:20" badge-positon="left" badge-text="99"></uni-list-chat>
-			<!-- 显示多头像 -->
-			<uni-list-chat title="uni-app" :avatar-list="avatarList" note="您收到一条新的消息5" time="2020-02-02 20:20"
-				badge-positon="left" badge-text="dot"></uni-list-chat>
-			<!-- 自定义右侧内容 -->
-			<uni-list-chat title="uni-app" :avatar-list="avatarList" note="您收到一条新的消息6" time="2020-02-02 20:20"
-				badge-positon="left" badge-text="dot">
-				<view class="chat-custom-right">
-					<text class="chat-custom-text">刚刚</text>
-					<!-- 需要使用 uni-icons 请自行引入 -->
-					<uni-icons type="star-filled" color="#999" size="18"></uni-icons>
-				</view>
-			</uni-list-chat>
+		<view v-if="dataSource.length == 0" class="no-data">
+			<image class="no-data-image" src="/static/logo.png"></image>
+			<text class="no-data-title">bbbbb</text>
+		</view>
 
-			<view class="text-area">
-				<text class="title">aaaa</text>
-			</view>
-			<uni-list-item title="列表文字"></uni-list-item>
-
-
-
-
-			<view class="review-student-info">
+		<uni-list v-if="dataSource.length != 0" :border="true">
+			
+			<view class="review-student-info" v-for="(userinfo, index) in dataSource" :key="index">
 				<view class="top-area">
 					<text class="moto">motoType</text>
 					<text class="time">time</text>
@@ -76,26 +47,18 @@
 
 <script>
 	class Person {
-	  name;
-	  constructor(name) {
-	    this.name = name;
-	  }
+		name;
+		constructor(name) {
+			this.name = name;
+		}
 	}
 	var dataSource = [];
-	
+
 	export default {
-		
 		components: {},
 		data() {
 			return {
 				dataSource,
-				avatarList: [{
-					url: 'https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png'
-				}, {
-					url: 'https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png'
-				}, {
-					url: 'https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png'
-				}]
 			}
 		},
 		onLoad() {
@@ -108,14 +71,14 @@
 		methods: {
 			loadList() {
 				setTimeout(function() {
-					for (var i = 0; i< 10; i++) {
-						let person = new Person("gy");	
+					for (var i = 0; i < 10; i++) {
+						let person = new Person("gy");
 						dataSource.push(person);
 					}
 					console.log("loadList complete");
 				}, 3000);
 			},
-			
+
 			onLeftSegmentTap(number) {
 				// 传递的参数
 				//console.log("eeeeeeee__" + number);
@@ -146,6 +109,29 @@
 
 
 <style lang="scss">
+	.no-data {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		
+		.no-data-image {
+			display: flex;
+			flex-direction: column;
+			height: 200rpx;
+			width: 200rpx;
+			margin-top: 200rpx;
+		}
+	
+		.no-data-title {
+			display: flex;
+			flex-direction: column;
+			font-size: 36rpx;
+			color: #800f94;
+		}
+	}
+	
+	
 	.review-student-info {
 		display: flex;
 		flex-direction: column;
