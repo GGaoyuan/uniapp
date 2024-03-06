@@ -94,6 +94,9 @@
 			onLeftSegmentTap(number) {
 				// 传递的参数
 				console.log("eeeeeeee__" + number);
+				uni.navigateTo({
+					url:'/pages/review/student-review/student-review'
+				})
 			},
 			
 			onRightSegmentTap(value) {

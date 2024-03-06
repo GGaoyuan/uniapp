@@ -18027,9 +18027,9 @@ var _default = {
       "navigationBarTitleText": "aaabbb"
     }
   }, {
-    "path": "pages/review/review",
+    "path": "pages/review/home/home",
     "style": {
-      "navigationBarTitleText": "车辆审核",
+      "navigationBarTitleText": "车辆审核222",
       "enablePullDownRefresh": false
     }
   }, {
@@ -18042,6 +18042,12 @@ var _default = {
     "path": "pages/appeal/appeal",
     "style": {
       "navigationBarTitleText": "违章申诉",
+      "enablePullDownRefresh": false
+    }
+  }, {
+    "path": "pages/review/student-review/student-review",
+    "style": {
+      "navigationBarTitleText": "天真！了",
       "enablePullDownRefresh": false
     }
   }],
@@ -18062,7 +18068,7 @@ var _default = {
       "selectedIconPath": "static/image/tabbar_icon_sel.png",
       "text": "首页"
     }, {
-      "pagePath": "pages/review/review",
+      "pagePath": "pages/review/home/home",
       "iconPath": "static/image/tabbar_icon.png",
       "selectedIconPath": "static/image/tabbar_icon_sel.png",
       "text": "车辆审核"
