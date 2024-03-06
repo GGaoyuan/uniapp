@@ -34,6 +34,7 @@
 
 
 
+
 			<view class="review-student-info">
 				<view class="top-area">
 					<text class="moto">motoType</text>
@@ -59,15 +60,12 @@
 					<view style="width: 10rpx; background-color: red;"></view>
 					<view style="width: 50%; display: flex; justify-content: center;">fff</view>
 				</view>
-
 				<view class="segmented-control">
 					<view class="segment left-segment" @click="onLeftSegmentTap('8848')">取消</view>
 					<view class="segment-divider"></view>
 					<view class="segment right-segment" @click="onRightSegmentTap('aaaaaaa')">确认</view>
 				</view>
-
 			</view>
-
 
 
 		</uni-list>
@@ -77,7 +75,12 @@
 
 <script>
 	export default {
-		
+		new AAVue({
+			el: "#app",
+			data: {
+				msg: "Hello World"
+			}
+		})
 		components: {},
 		data() {
 			return {
@@ -94,17 +97,24 @@
 			onLeftSegmentTap(number) {
 				// 传递的参数
 				//console.log("eeeeeeee__" + number);
-				uni.navigateTo({
-					url:'./student-review/student-review'
-				})
+				// var test = Test()
+				// test.age = 10;
+				// test.name = "gg";
+				setTimeout(function() {
+					console.log("setTimeout:");
+				}, 5000);
+
+				// uni.navigateTo({
+				// 	url: './student-review/student-review'
+				// })
 			},
-			
+
 			onRightSegmentTap(value) {
 				//console.log("asdasdadadasda__" + value);
 				uni.navigateTo({
-					url:'./student-review/student-review'
+					url: './student-review/student-review'
 				})
-				
+
 			},
 		},
 	}
