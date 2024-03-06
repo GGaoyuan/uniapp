@@ -18027,9 +18027,9 @@ var _default = {
       "navigationBarTitleText": "aaabbb"
     }
   }, {
-    "path": "pages/review/home/home",
+    "path": "pages/review/review",
     "style": {
-      "navigationBarTitleText": "车辆审核222",
+      "navigationBarTitleText": "车辆审核",
       "enablePullDownRefresh": false
     }
   }, {
@@ -18068,7 +18068,7 @@ var _default = {
       "selectedIconPath": "static/image/tabbar_icon_sel.png",
       "text": "首页"
     }, {
-      "pagePath": "pages/review/home/home",
+      "pagePath": "pages/review/review",
       "iconPath": "static/image/tabbar_icon.png",
       "selectedIconPath": "static/image/tabbar_icon_sel.png",
       "text": "车辆审核"
