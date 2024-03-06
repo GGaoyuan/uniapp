@@ -93,14 +93,17 @@
 		methods: {
 			onLeftSegmentTap(number) {
 				// 传递的参数
-				console.log("eeeeeeee__" + number);
+				//console.log("eeeeeeee__" + number);
 				uni.navigateTo({
-					url:'/pages/review/student-review/student-review'
+					url:'./student-review/student-review'
 				})
 			},
 			
 			onRightSegmentTap(value) {
-				console.log("asdasdadadasda__" + value);
+				//console.log("asdasdadadasda__" + value);
+				uni.navigateTo({
+					url:'./student-review/student-review'
+				})
 				
 			},
 		},

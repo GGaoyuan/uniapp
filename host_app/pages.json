@@ -1,16 +1,16 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "aaabbb"
-			}
-		},
-		{
 			"path": "pages/review/review",
 			"style": {
 				"navigationBarTitleText": "车辆审核",
 				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "aaabbb"
 			}
 		},
 		{
@@ -50,12 +50,12 @@
 		"selectedColor": "#086d5b",
 		"backgroundColor": "#ffffff",
 		"list": [
-			{
-				"pagePath": "pages/index/index",
-				"iconPath": "static/image/tabbar_icon.png",
-				"selectedIconPath": "static/image/tabbar_icon_sel.png",
-				"text": "首页"
-			},
+			// {
+			// 	"pagePath": "pages/index/index",
+			// 	"iconPath": "static/image/tabbar_icon.png",
+			// 	"selectedIconPath": "static/image/tabbar_icon_sel.png",
+			// 	"text": "首页"
+			// },
 			{
 				"pagePath": "pages/review/review",
 				"iconPath": "static/image/tabbar_icon.png",

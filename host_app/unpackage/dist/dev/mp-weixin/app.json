@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/review/review",
+    "pages/index/index",
     "pages/scan/scan",
     "pages/appeal/appeal",
     "pages/review/student-review/student-review"
@@ -18,12 +18,6 @@
     "selectedColor": "#086d5b",
     "backgroundColor": "#ffffff",
     "list": [
-      {
-        "pagePath": "pages/index/index",
-        "iconPath": "static/image/tabbar_icon.png",
-        "selectedIconPath": "static/image/tabbar_icon_sel.png",
-        "text": "首页"
-      },
       {
         "pagePath": "pages/review/review",
         "iconPath": "static/image/tabbar_icon.png",
