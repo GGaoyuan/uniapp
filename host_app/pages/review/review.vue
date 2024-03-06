@@ -1,5 +1,6 @@
 <template>
 	<view>
+		
 		<uni-list :border="true">
 			<!-- 显示圆形头像 -->
 			<uni-list-chat :avatar-circle="true" title="uni-app"
@@ -74,16 +75,20 @@
 
 
 <script>
+	class Person {
+	  name;
+	  constructor(name) {
+	    this.name = name;
+	  }
+	}
+	var dataSource = [];
+	
 	export default {
-		new AAVue({
-			el: "#app",
-			data: {
-				msg: "Hello World"
-			}
-		})
+		
 		components: {},
 		data() {
 			return {
+				dataSource,
 				avatarList: [{
 					url: 'https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png'
 				}, {
@@ -93,7 +98,24 @@
 				}]
 			}
 		},
+		onLoad() {
+			console.log("onLoad");
+		},
+		onReady() {
+			console.log("onReady");
+			this.loadList();
+		},
 		methods: {
+			loadList() {
+				setTimeout(function() {
+					for (var i = 0; i< 10; i++) {
+						let person = new Person("gy");	
+						dataSource.push(person);
+					}
+					console.log("loadList complete");
+				}, 3000);
+			},
+			
 			onLeftSegmentTap(number) {
 				// 传递的参数
 				//console.log("eeeeeeee__" + number);
