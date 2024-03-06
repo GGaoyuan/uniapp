@@ -98,6 +98,7 @@
 			
 			onRightSegmentTap(value) {
 				console.log("asdasdadadasda__" + value);
+				
 			},
 		},
 	}

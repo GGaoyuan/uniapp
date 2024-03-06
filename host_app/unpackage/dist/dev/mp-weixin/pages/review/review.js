@@ -240,6 +240,16 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   components: {},
   data: function data() {
@@ -252,6 +262,15 @@ var _default = {
         url: 'https://qiniu-web-assets.dcloud.net.cn/unidoc/zh/unicloudlogo.png'
       }]
     };
+  },
+  methods: {
+    onLeftSegmentTap: function onLeftSegmentTap(number) {
+      // 传递的参数
+      console.log("eeeeeeee__" + number);
+    },
+    onRightSegmentTap: function onRightSegmentTap(value) {
+      console.log("asdasdadadasda__" + value);
+    }
   }
 };
 exports.default = _default;
