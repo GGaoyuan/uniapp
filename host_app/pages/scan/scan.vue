@@ -1,34 +1,35 @@
 <template>
-		<view class="container-area">
-			<view class="test1">A</view>
-			<uni-list :border="true">
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-				<text>AAAAAA</text>
-			</uni-list>
-			<view class="test3">C</view>
-		</view>
-		
+	<view class="container-area">
+		<view class="top">A</view>
+		<!-- <view class="middle">B</view> -->
+		<uni-list class="middle">
+			<text>BBBBBB</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>CCCCCC</text>
+		</uni-list>
+		<view class="bottom">C</view>
+	</view>
+
 </template>
 
 
@@ -59,27 +60,35 @@
 	.container-area {
 		display: flex;
 		flex-direction: column;
-		margin-top: 101rpx;
-		margin-bottom: 101rpx;
-		//height: 900rpx;
-		background-color: blue;
-	}
-
-	.test1 {
 		position: absolute;
 		top: 0rpx;
 		left: 0rpx;
 		right: 0rpx;
-		height: 100rpx;
-		background-color: red;
+		bottom: 0rpx;
+		background-color: blue;
 	}
 
-	.test3 {
-		position: absolute;
-		left: 0rpx;
-		right: 0rpx;
+	.top {
+		position: sticky;
+		top: 0rpx;
+		min-height: 100rpx;
+		background-color: red;
+		z-index: 100;
+	}
+
+	.middle {
+		flex-grow: 1;
+		margin-top: 0rpx;
+		margin-bottom: 0rpx;
+		background-color: green;
+		z-index: 1;
+	}
+
+	.bottom {
+		position: sticky;
 		bottom: 0rpx;
-		height: 100rpx;
+		min-height: 100rpx;
 		background-color: yellow;
+		z-index: 100;
 	}
 </style>

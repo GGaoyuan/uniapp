@@ -27,24 +27,34 @@
 .container-area {
   display: flex;
   flex-direction: column;
-  margin-top: 101rpx;
-  margin-bottom: 101rpx;
-  background-color: blue;
-}
-.test1 {
   position: absolute;
   top: 0rpx;
   left: 0rpx;
   right: 0rpx;
-  height: 100rpx;
-  background-color: red;
-}
-.test3 {
-  position: absolute;
-  left: 0rpx;
-  right: 0rpx;
   bottom: 0rpx;
-  height: 100rpx;
+  background-color: blue;
+}
+.top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0rpx;
+  min-height: 100rpx;
+  background-color: red;
+  z-index: 100;
+}
+.middle {
+  flex-grow: 1;
+  margin-top: 0rpx;
+  margin-bottom: 0rpx;
+  background-color: green;
+  z-index: 1;
+}
+.bottom {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0rpx;
+  min-height: 100rpx;
   background-color: yellow;
+  z-index: 100;
 }
 
