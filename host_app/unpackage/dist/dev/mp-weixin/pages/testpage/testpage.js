@@ -98,32 +98,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
-try {
-  components = {
-    uniList: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list/uni-list */ "uni_modules/uni-list/components/uni-list/uni-list").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list/uni-list.vue */ 80))
-    },
-    uniListItem: function () {
-      return __webpack_require__.e(/*! import() | uni_modules/uni-list/components/uni-list-item/uni-list-item */ "uni_modules/uni-list/components/uni-list-item/uni-list-item").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue */ 94))
-    },
-  }
-} catch (e) {
-  if (
-    e.message.indexOf("Cannot find module") !== -1 &&
-    e.message.indexOf(".vue") !== -1
-  ) {
-    console.error(e.message)
-    console.error("1. 排查组件名称拼写是否正确")
-    console.error(
-      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
-    )
-    console.error(
-      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
-    )
-  } else {
-    throw e
-  }
-}
 var render = function () {
   var _vm = this
   var _h = _vm.$createElement
@@ -179,59 +153,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _vue = __webpack_require__(/*! vue */ 25);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default = {
   components: {},
   data: function data() {
@@ -257,11 +178,14 @@ var _default = {
       setTimeout(function () {
         _this.dataLoaded = true;
         uni.hideLoading();
-        for (var i = 0; i < 10; i++) {
-          _this.dataSource.push('gy');
+        for (var i = 0; i < 2; i++) {
+          var data = {
+            id: i
+          };
+          _this.dataSource.push(data);
         }
         console.log("loadList complete");
-      }, 1000);
+      }, 500);
     },
     onLeftListItemTap: function onLeftListItemTap(number) {
       console.log("onLeftListItemTap");
