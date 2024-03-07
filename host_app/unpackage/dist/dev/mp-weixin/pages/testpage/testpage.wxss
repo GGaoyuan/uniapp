@@ -43,12 +43,13 @@
   font-size: 36rpx;
   color: #800f94;
 }
-.container.data-v-36459ba6 {
+.list-view.data-v-36459ba6 {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: #EBEEF5;
 }
-.header.data-v-36459ba6 {
+.list-view .list-view-header.data-v-36459ba6 {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -59,9 +60,11 @@
   height: auto;
   text-align: center;
 }
-.list-view.data-v-36459ba6 {
+.list-view .list-view-content.data-v-36459ba6 {
   flex: 1;
   overflow: auto;
+  margin-left: 20rpx;
+  margin-right: 200rpx;
 }
 .list-item.data-v-36459ba6 {
   height: 80px;

@@ -6,10 +6,13 @@
 			</view>
 		</view> 
 		<scroll-view class="content" scroll-y>
-			<view class="" style="padding: 0 20rpx;">
+			<!-- <view class="" style="padding: 0 20rpx;">
 				<view class="list-item" v-for="item in list" :key="item.id">{{ item.text }}</view>
 				<view class="list-item" v-for="item in list" :key="item.id">{{ item.text }}</view>
-			</view>
+			</view> -->
+			
+			
+			
 		</scroll-view>
 		<view class="footer">
 			<view class="" style="width: 100%;height: 80rpx;"> Footer </view>
@@ -20,6 +23,7 @@
 <script>
 	export default {
 		data() {
+			test = 20;
 			return {
 				list: [{
 						id: 1,

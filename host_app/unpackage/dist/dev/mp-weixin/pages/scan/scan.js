@@ -160,8 +160,12 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
 var _default = {
   data: function data() {
+    test = 20;
     return {
       list: [{
         id: 1,
