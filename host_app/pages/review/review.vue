@@ -11,7 +11,7 @@
 					<text class="moto">motoType</text>
 					<text class="time">time</text>
 				</view>
-				<view style="height: 10rpx; background-color: red;"></view>
+				<view style="height: 10rpx; background-color: yellow;"></view>
 				<view class="middle-area">
 					<view class="info-area">
 						<view class="identity-area">
@@ -25,11 +25,12 @@
 					</view>
 					<text class="review-status">status</text>
 				</view>
-				<view style="height: 10rpx; background-color: red;"></view>
-				<view class="segmented-control">
-					<view class="segment left-segment" @click="onLeftSegmentTap('8848')">取消</view>
-					<view class="segment-divider"></view>
-					<view class="segment right-segment" @click="onRightSegmentTap('aaaaaaa')">确认</view>
+				<view style="height: 10rpx; background-color: yellow;"></view>
+				<view class="bottom-area">
+					<view class=".bottom-left-button" @click="onLeftSegmentTap('8848')">取消</view>
+					<!-- <view class="segment-divider"></view> -->
+					<view style="width: 10rpx; height: 100%; background-color: red;"></view>
+					<view class=".bottom-right-button" @click="onRightSegmentTap('aaaaaaa')">确认</view>
 				</view>
 			</view>
 
@@ -87,13 +88,13 @@
 				// 	url: './student-review/student-review'
 				// })
 
-				
+
 				// let obj = { name: '张三', age: 20 };
 				// let paramsStr = JSON.stringify(obj); // 将对象序列化成字符串
 				// uni.navigateTo({
 				//   url: '/pages/index/index?params=' + encodeURIComponent(paramsStr) // 将参数添加到URL中并编码
 				// });
-				
+
 				uni.scanCode({
 					success: (res) => {
 						let data = JSON.stringify(res);
@@ -180,45 +181,33 @@
 		.bottom-area {
 			display: flex;
 			flex-direction: row;
-			background-color: yellow;
-			width: 50%;
 			justify-content: center;
-			align-content: center;
-		}
-
-		.segmented-control {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			align-items: stretch;
 			background-color: #fff;
-			border: 1px solid #e6e6e6;
-			border-radius: 5px;
-			overflow: hidden;
+			//overflow: hidden;
+			height: 100rpx;
 			// margin-left: 20rpx;
 			// margin-right: 20rpx;
 		}
 
-		.segment {
+		.bottom-left-button {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
 			flex: 1;
 			text-align: center;
-			padding: 10px 0;
 			font-size: 14px;
+			background-color: #800f94;
 		}
 
-		.left-segment {
-			color: #333333;
-			border-right: 1px solid #e6e6e6;
-		}
-
-		.right-segment {
-			color: #1E90FF;
-		}
-
-		.segment-divider {
-			width: 1px;
-			background-color: red;
-			// height: 30px;
-			/* Adjust the height as needed */
+		.bottom-right-button {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			flex: 1;
+			text-align: center;
+			font-size: 14px;
+			background-color: blue;
 		}
 	}
 </style>

@@ -220,6 +220,7 @@ var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/run
 //
 //
 //
+//
 var Person = /*#__PURE__*/(0, _createClass2.default)(function Person(name) {
   (0, _classCallCheck2.default)(this, Person);
   (0, _defineProperty2.default)(this, "name", void 0);
