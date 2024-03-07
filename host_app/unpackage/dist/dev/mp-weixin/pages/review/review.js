@@ -127,12 +127,14 @@ var render = function () {
   var _c = _vm._self._c || _h
   var g0 = _vm.dataSource.length
   var g1 = _vm.dataSource.length
+  var g2 = g1 != 0 ? _vm.dataSource.length : null
   _vm.$mp.data = Object.assign(
     {},
     {
       $root: {
         g0: g0,
         g1: g1,
+        g2: g2,
       },
     }
   )
@@ -221,6 +223,15 @@ var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/run
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var Person = /*#__PURE__*/(0, _createClass2.default)(function Person(name) {
   (0, _classCallCheck2.default)(this, Person);
   (0, _defineProperty2.default)(this, "name", void 0);
@@ -249,7 +260,7 @@ var _default = {
           dataSource.push(person);
         }
         console.log("loadList complete");
-      }, 500);
+      }, 1500);
     },
     onLeftSegmentTap: function onLeftSegmentTap(number) {
       // 传递的参数

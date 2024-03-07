@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/scan/scan",
     "pages/appeal/appeal",
-    "pages/review/student-review/student-review"
+    "pages/review/student-review/student-review",
+    "pages/testpage/testpage"
   ],
   "subPackages": [],
   "window": {
@@ -35,6 +36,12 @@
         "iconPath": "static/image/tabbar_icon.png",
         "selectedIconPath": "static/image/tabbar_icon_sel.png",
         "text": "违章申诉"
+      },
+      {
+        "pagePath": "pages/testpage/testpage",
+        "iconPath": "static/image/tabbar_icon.png",
+        "selectedIconPath": "static/image/tabbar_icon_sel.png",
+        "text": "Test"
       }
     ]
   },

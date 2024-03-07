@@ -34,6 +34,14 @@
 				"navigationBarTitleText" : "天真！了",
 				"enablePullDownRefresh" : false
 			}
+		},
+		{
+			"path" : "pages/testpage/testpage",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
 		}
 	],
 	"globalStyle": {
@@ -73,6 +81,12 @@
 				"iconPath": "static/image/tabbar_icon.png",
 				"selectedIconPath": "static/image/tabbar_icon_sel.png",
 				"text": "违章申诉"
+			},
+			{
+				"pagePath": "pages/testpage/testpage",
+				"iconPath": "static/image/tabbar_icon.png",
+				"selectedIconPath": "static/image/tabbar_icon_sel.png",
+				"text": "Test"
 			}
 		]
 	}

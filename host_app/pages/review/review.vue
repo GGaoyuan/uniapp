@@ -1,41 +1,50 @@
 <template>
-	<view>
+	<view class="container">
 		<view v-if="dataSource.length == 0" class="no-data">
 			<image class="no-data-image" src="/static/logo.png"></image>
 			<text class="no-data-title">bbbbb</text>
 		</view>
 
-		<uni-list v-if="dataSource.length != 0" :border="true">
-			<view class="review-student-info" v-for="(userinfo, index) in dataSource" :key="index">
-				<view class="top-area">
-					<text class="moto">motoType</text>
-					<text class="time">time</text>
-				</view>
-				<view style="height: 10rpx; background-color: yellow;"></view>
-				<view class="middle-area">
-					<view class="info-area">
-						<view class="identity-area">
-							<text class="user-job"> jobstudent </text>
-							<text class="user-name">name</text>
-						</view>
-						<text class="user-id">id</text>
-						<text class="user-phone">phone</text>
-						<text class="user-moto-name">motoname</text>
-						<text class="user-moto-color">motname</text>
-					</view>
-					<text class="review-status">status</text>
-				</view>
-				<view style="height: 10rpx; background-color: yellow;"></view>
-				<view class="bottom-area">
-					<view class=".bottom-left-button" @click="onLeftSegmentTap('8848')">取消</view>
-					<!-- <view class="segment-divider"></view> -->
-					<view style="width: 10rpx; height: 100%; background-color: red;"></view>
-					<view class=".bottom-right-button" @click="onRightSegmentTap('aaaaaaa')">确认</view>
-				</view>
+		<view v-if="dataSource.length != 0" class="list-view">
+			<view class="segment">
+				segment
 			</view>
+			<uni-list v-if="dataSource.length != 0" :border="true">
+				<template slot="header" style="height: 200rpx; background-color: blanchedalmond;">
+					
+				</template>
+				<view class="review-student-info" v-for="(userinfo, index) in dataSource" :key="index">
+					<view class="top-area">
+						<text class="moto">motoType</text>
+						<text class="time">time</text>
+					</view>
+					<view style="height: 10rpx; background-color: yellow;"></view>
+					<view class="middle-area">
+						<view class="info-area">
+							<view class="identity-area">
+								<text class="user-job"> jobstudent </text>
+								<text class="user-name">name</text>
+							</view>
+							<text class="user-id">id</text>
+							<text class="user-phone">phone</text>
+							<text class="user-moto-name">motoname</text>
+							<text class="user-moto-color">motname</text>
+						</view>
+						<text class="review-status">status</text>
+					</view>
+					<view style="height: 10rpx; background-color: yellow;"></view>
+					<view class="bottom-area">
+						<view class=".bottom-left-button" @click="onLeftSegmentTap('8848')">取消</view>
+						<!-- <view class="segment-divider"></view> -->
+						<view style="width: 10rpx; height: 100%; background-color: red;"></view>
+						<view class=".bottom-right-button" @click="onRightSegmentTap('aaaaaaa')">确认</view>
+					</view>
+				</view>
 
 
-		</uni-list>
+			</uni-list>
+
+		</view>
 	</view>
 </template>
 
@@ -71,7 +80,7 @@
 						dataSource.push(person);
 					}
 					console.log("loadList complete");
-				}, 500);
+				}, 1500);
 			},
 
 			onLeftSegmentTap(number) {
@@ -123,6 +132,12 @@
 
 
 <style lang="scss">
+	.container {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+	}
+	
 	.no-data {
 		display: flex;
 		flex-direction: column;
@@ -145,13 +160,98 @@
 		}
 	}
 
+	.list-view {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		.segment {
+			position: sticky;
+			top: 0;
+			left: 0;
+			right: 0;
+			background-color: #333;
+			color: #fff;
+			height: auto;
+			text-align: center;
+		}
+		
+		.review-student-info {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			background-color: aqua;
+			overflow: hidden;
+			bounce
+			.top-area {
+				margin-left: 20rpx;
+				margin-right: 20rpx;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				background-color: red;
+			}
+		
+			.middle-area {
+				margin-left: 20rpx;
+				margin-right: 20rpx;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				background-color: green;
+				align-items: center;
+		
+				.info-area {
+					display: flex;
+					flex-direction: column;
+				}
+		
+				.review-status {}
+			}
+		
+			.bottom-area {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: stretch;
+				background-color: #fff;
+				//overflow: hidden;
+				height: 100rpx;
+				// margin-left: 20rpx;
+				// margin-right: 20rpx;
+			}
+		
+			.bottom-left-button {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				flex: 1;
+				text-align: center;
+				font-size: 14px;
+				background-color: #800f94;
+			}
+		
+			.bottom-right-button {
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+				flex: 1;
+				text-align: center;
+				font-size: 14px;
+				background-color: blue;
+			}
+		}
+		
+	}
+
 
 	.review-student-info {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		background-color: aqua;
-
+		overflow: hidden;
+		bounce
 		.top-area {
 			margin-left: 20rpx;
 			margin-right: 20rpx;
@@ -210,4 +310,5 @@
 			background-color: blue;
 		}
 	}
+
 </style>

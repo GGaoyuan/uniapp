@@ -24,6 +24,11 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
 .no-data {
   display: flex;
   flex-direction: column;
@@ -43,13 +48,86 @@
   font-size: 36rpx;
   color: #800f94;
 }
+.list-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.list-view .segment {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  height: auto;
+  text-align: center;
+}
+.list-view .review-student-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: aqua;
+  overflow: hidden;
+}
+.list-view .review-student-info bounce
+.top-area {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: red;
+}
+.list-view .review-student-info .middle-area {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: green;
+  align-items: center;
+}
+.list-view .review-student-info .middle-area .info-area {
+  display: flex;
+  flex-direction: column;
+}
+.list-view .review-student-info .bottom-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #fff;
+  height: 100rpx;
+}
+.list-view .review-student-info .bottom-left-button {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  background-color: #800f94;
+}
+.list-view .review-student-info .bottom-right-button {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  background-color: blue;
+}
 .review-student-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: aqua;
+  overflow: hidden;
 }
-.review-student-info .top-area {
+.review-student-info bounce
+.top-area {
   margin-left: 20rpx;
   margin-right: 20rpx;
   display: flex;
