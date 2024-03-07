@@ -24,37 +24,40 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.container-area {
+.container.data-v-1db32b26 {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 0rpx;
-  left: 0rpx;
-  right: 0rpx;
-  bottom: 0rpx;
-  background-color: blue;
+  height: 100vh;
 }
-.top {
+.header.data-v-1db32b26 {
   position: -webkit-sticky;
   position: sticky;
-  top: 0rpx;
-  min-height: 100rpx;
-  background-color: red;
-  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  height: auto;
+  text-align: center;
 }
-.middle {
-  flex-grow: 1;
-  margin-top: 0rpx;
-  margin-bottom: 0rpx;
-  background-color: green;
-  z-index: 1;
+.content.data-v-1db32b26 {
+  flex: 1;
+  overflow: auto;
 }
-.bottom {
+.list-item.data-v-1db32b26 {
+  height: 80px;
+  line-height: 80px;
+  border: 1px solid red;
+  text-align: center;
+}
+.footer.data-v-1db32b26 {
   position: -webkit-sticky;
   position: sticky;
-  bottom: 0rpx;
-  min-height: 100rpx;
-  background-color: yellow;
-  z-index: 100;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
 }
 
