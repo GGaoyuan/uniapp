@@ -25,6 +25,26 @@
 			<text>AAAAAA</text>
 			<text>AAAAAA</text>
 			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
+			<text>AAAAAA</text>
 			<text>CCCCCC</text>
 		</uni-list>
 		<view class="bottom">C</view>

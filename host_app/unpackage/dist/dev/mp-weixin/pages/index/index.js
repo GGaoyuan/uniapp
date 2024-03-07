@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(uni) {
 
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -150,20 +150,48 @@ exports.default = void 0;
 //
 //
 //
-//
-//
-//
+
+var test = 'aaa';
 var _default = {
   data: function data() {
     return {
       title: 'aaaasdasdad',
-      text: 'text'
+      text: 'text',
+      test: test
+      //res: '',
     };
   },
-  onLoad: function onLoad() {},
+
+  onLoad: function onLoad(option) {
+    //option为object类型，会序列化上个页面传递的参数
+    // let queryParams = this.$route.query; // 获取URL参数
+    // if (queryParams && queryParams.params) {
+    // 	let paramsStr = decodeURIComponent(queryParams.params); // 解码URL参数
+    // 	let obj = JSON.parse(paramsStr); // 反序列化字符串得到对象
+    // 	console.log('接收到的对象：', obj);
+    // } else {
+    // 	console.error('未能正确接收到对象');
+    // }
+    //console.log(option.res); //打印出上个页面传递的参数。
+    console.log("asd");
+    var data = uni.getStorageSync('data');
+    uni.removeStorageSync('data');
+    var obj = JSON.parse(data);
+    test = 'asdasdads';
+    // test = obj["result"]
+    // console.log(obj["result"]);
+    // test = 'asdasdads'
+  },
+
+  // onLoad: function(option) {
+  // 	console.log(option.res)
+  // 	res = option.res;
+  // 	result = option.res;
+  // },
   methods: {}
 };
 exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
 

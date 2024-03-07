@@ -26,11 +26,6 @@
 					<text class="review-status">status</text>
 				</view>
 				<view style="height: 10rpx; background-color: red;"></view>
-				<view class="bottom-area">
-					<view style="width: 50%; display: flex; justify-content: center;">fff</view>
-					<view style="width: 10rpx; background-color: red;"></view>
-					<view style="width: 50%; display: flex; justify-content: center;">fff</view>
-				</view>
 				<view class="segmented-control">
 					<view class="segment left-segment" @click="onLeftSegmentTap('8848')">取消</view>
 					<view class="segment-divider"></view>
@@ -75,7 +70,7 @@
 						dataSource.push(person);
 					}
 					console.log("loadList complete");
-				}, 3000);
+				}, 500);
 			},
 
 			onLeftSegmentTap(number) {
@@ -84,13 +79,32 @@
 				// var test = Test()
 				// test.age = 10;
 				// test.name = "gg";
-				setTimeout(function() {
-					console.log("setTimeout:");
-				}, 5000);
+				// setTimeout(function() {
+				// 	console.log("setTimeout:");
+				// }, 5000);
 
 				// uni.navigateTo({
 				// 	url: './student-review/student-review'
 				// })
+
+				
+				// let obj = { name: '张三', age: 20 };
+				// let paramsStr = JSON.stringify(obj); // 将对象序列化成字符串
+				// uni.navigateTo({
+				//   url: '/pages/index/index?params=' + encodeURIComponent(paramsStr) // 将参数添加到URL中并编码
+				// });
+				
+				uni.scanCode({
+					success: (res) => {
+						let data = JSON.stringify(res);
+						uni.setStorageSync('data', data);
+						console.log("aaaa");
+						uni.navigateTo({
+							url: '/pages/index/index'
+						})
+					}
+				})
+
 			},
 
 			onRightSegmentTap(value) {
@@ -113,7 +127,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		
+
 		.no-data-image {
 			display: flex;
 			flex-direction: column;
@@ -121,7 +135,7 @@
 			width: 200rpx;
 			margin-top: 200rpx;
 		}
-	
+
 		.no-data-title {
 			display: flex;
 			flex-direction: column;
@@ -129,8 +143,8 @@
 			color: #800f94;
 		}
 	}
-	
-	
+
+
 	.review-student-info {
 		display: flex;
 		flex-direction: column;
@@ -206,31 +220,5 @@
 			// height: 30px;
 			/* Adjust the height as needed */
 		}
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-		background-color: aqua;
-	}
-
-	.test {
-		display: flex;
-		justify-content: center;
-		background-color: aqua;
-		height: 200rpx;
-	}
-
-	.chat-custom-right {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: flex-end;
-	}
-
-	.chat-custom-text {
-		font-size: 12px;
-		color: #999;
 	}
 </style>

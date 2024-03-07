@@ -220,11 +220,6 @@ var _defineProperty2 = _interopRequireDefault(__webpack_require__(/*! @babel/run
 //
 //
 //
-//
-//
-//
-//
-//
 var Person = /*#__PURE__*/(0, _createClass2.default)(function Person(name) {
   (0, _classCallCheck2.default)(this, Person);
   (0, _defineProperty2.default)(this, "name", void 0);
@@ -253,7 +248,7 @@ var _default = {
           dataSource.push(person);
         }
         console.log("loadList complete");
-      }, 3000);
+      }, 500);
     },
     onLeftSegmentTap: function onLeftSegmentTap(number) {
       // 传递的参数
@@ -261,13 +256,30 @@ var _default = {
       // var test = Test()
       // test.age = 10;
       // test.name = "gg";
-      setTimeout(function () {
-        console.log("setTimeout:");
-      }, 5000);
+      // setTimeout(function() {
+      // 	console.log("setTimeout:");
+      // }, 5000);
 
       // uni.navigateTo({
       // 	url: './student-review/student-review'
       // })
+
+      // let obj = { name: '张三', age: 20 };
+      // let paramsStr = JSON.stringify(obj); // 将对象序列化成字符串
+      // uni.navigateTo({
+      //   url: '/pages/index/index?params=' + encodeURIComponent(paramsStr) // 将参数添加到URL中并编码
+      // });
+
+      uni.scanCode({
+        success: function success(res) {
+          var data = JSON.stringify(res);
+          uni.setStorageSync('data', data);
+          console.log("aaaa");
+          uni.navigateTo({
+            url: '/pages/index/index'
+          });
+        }
+      });
     },
     onRightSegmentTap: function onRightSegmentTap(value) {
       //console.log("asdasdadadasda__" + value);
