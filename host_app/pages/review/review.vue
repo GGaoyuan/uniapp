@@ -1,25 +1,75 @@
+<script>
+	import {
+		reactive
+	} from "vue";
+
+	export default {
+		components: {},
+		data() {
+			console.log("script:data");
+			return {
+				dataLoaded: false,
+				dataSource: [],
+
+			}
+		},
+		onLoad() {
+			console.log("script:onLoad");
+		},
+		onReady() {
+			console.log("script:onReady");
+			this.loadList();
+		},
+		methods: {
+			loadList() {
+				uni.showLoading({
+					title: '加载中'
+				});
+				setTimeout(() => {
+					this.dataLoaded = true
+					uni.hideLoading()
+					for (var i = 0; i < 2; i++) {
+						const data = {
+							id: i,
+						}
+						this.dataSource.push(data);
+					}
+					console.log("loadList complete");
+				}, 500);
+			},
+
+			onLeftListItemTap(number) {
+				console.log("onLeftListItemTap");
+			},
+
+			onRightListItemTap(value) {
+				console.log("onRightListItemTap");
+
+			},
+		},
+	}
+</script>
+
 <template>
-	<view class="container">
-		<view v-if="dataSource.length == 0" class="no-data">
+	<view>
+		<view v-if="dataSource.length == 0 && dataLoaded" class="no-data">
 			<image class="no-data-image" src="/static/logo.png"></image>
-			<text class="no-data-title">bbbbb</text>
+			<text class="no-data-title">空的</text>
 		</view>
 
-		<view v-if="dataSource.length != 0" class="list-view">
-			<view class="segment">
-				segment
+
+		<view class="list" v-if="dataSource.length != 0 && dataLoaded">
+			<view class="list-header">
+				Headerbbb
 			</view>
-			<uni-list v-if="dataSource.length != 0" :border="true">
-				<template slot="header" style="height: 200rpx; background-color: blanchedalmond;">
-					
-				</template>
-				<view class="review-student-info" v-for="(userinfo, index) in dataSource" :key="index">
-					<view class="top-area">
+
+			<scroll-view class="list-content" scroll-y rebound="false">
+				<view class="list-content-item" v-for="item in dataSource" :key="item.id">
+					<view class="list-content-item-top">
 						<text class="moto">motoType</text>
 						<text class="time">time</text>
 					</view>
-					<view style="height: 10rpx; background-color: yellow;"></view>
-					<view class="middle-area">
+					<view class="list-content-item-mid">
 						<view class="info-area">
 							<view class="identity-area">
 								<text class="user-job"> jobstudent </text>
@@ -32,112 +82,122 @@
 						</view>
 						<text class="review-status">status</text>
 					</view>
-					<view style="height: 10rpx; background-color: yellow;"></view>
-					<view class="bottom-area">
-						<view class=".bottom-left-button" @click="onLeftSegmentTap('8848')">取消</view>
-						<!-- <view class="segment-divider"></view> -->
+					<view class="list-content-item-bottom">
+						<view class=".bottom-left-button" @click="onLeftListItemTap('8848')">取消</view>
 						<view style="width: 10rpx; height: 100%; background-color: red;"></view>
-						<view class=".bottom-right-button" @click="onRightSegmentTap('aaaaaaa')">确认</view>
+						<view class=".bottom-right-button" @click="onRightListItemTap('aaaaaaa')">确认</view>
 					</view>
 				</view>
 
-
-			</uni-list>
+			</scroll-view>
 
 		</view>
 	</view>
 </template>
 
 
-<script>
-	class Person {
-		name;
-		constructor(name) {
-			this.name = name;
-		}
-	}
-	var dataSource = [];
-
-	export default {
-		components: {},
-		data() {
-			return {
-				dataSource,
-			}
-		},
-		onLoad() {
-			console.log("onLoad");
-		},
-		onReady() {
-			console.log("onReady");
-			this.loadList();
-		},
-		methods: {
-			loadList() {
-				setTimeout(function() {
-					for (var i = 0; i < 10; i++) {
-						let person = new Person("gy");
-						dataSource.push(person);
-					}
-					console.log("loadList complete");
-				}, 1500);
-			},
-
-			onLeftSegmentTap(number) {
-				// 传递的参数
-				//console.log("eeeeeeee__" + number);
-				// var test = Test()
-				// test.age = 10;
-				// test.name = "gg";
-				// setTimeout(function() {
-				// 	console.log("setTimeout:");
-				// }, 5000);
-
-				// uni.navigateTo({
-				// 	url: './student-review/student-review'
-				// })
-
-
-				// let obj = { name: '张三', age: 20 };
-				// let paramsStr = JSON.stringify(obj); // 将对象序列化成字符串
-				// uni.navigateTo({
-				//   url: '/pages/index/index?params=' + encodeURIComponent(paramsStr) // 将参数添加到URL中并编码
-				// });
-
-				uni.scanCode({
-					success: (res) => {
-						let data = JSON.stringify(res);
-						uni.setStorageSync('data', data);
-						console.log("aaaa");
-						uni.navigateTo({
-							url: '/pages/index/index'
-						})
-					}
-				})
-
-			},
-
-			onRightSegmentTap(value) {
-				//console.log("asdasdadadasda__" + value);
-				uni.navigateTo({
-					url: './student-review/student-review'
-				})
-
-			},
-		},
-	}
-</script>
-
-
-
-
-<style lang="scss">
-	.container {
+<style lang="scss" scoped>
+	.list {
 		display: flex;
 		flex-direction: column;
 		height: 100vh;
+
+		.list-header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			background-color: #333;
+			color: #fff;
+			height: 80rpx;
+			text-align: center;
+			z-index: 99;
+		}
+
+		.list-content {
+			position: sticky;
+			margin-top: 80rpx;
+			flex: 1;
+			overflow: auto;
+
+			.list-content-item {
+				display: flex;
+				flex-direction: column;
+				// height: 180rpx;
+				margin-top: 20rpx;
+				margin-bottom: 40rpx;
+				margin-left: 40rpx;
+				margin-right: 40rpx;
+				background-color: blue;
+
+				.list-content-item-top {
+					margin-left: 20rpx;
+					margin-right: 20rpx;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					background-color: red;
+				}
+
+				.list-content-item-mid {
+					// margin-left: 20rpx;
+					// margin-right: 20rpx;
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					background-color: green;
+					align-items: center;
+
+					.info-area {
+						display: flex;
+						flex-direction: column;
+					}
+
+					.review-status {}
+				}
+
+				.list-content-item-bottom {
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: stretch;
+					background-color: #fff;
+					//overflow: hidden;
+					height: 100rpx;
+					// margin-left: 20rpx;
+					// margin-right: 20rpx;
+				}
+
+				.bottom-left-button {
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+					flex: 1;
+					text-align: center;
+					font-size: 14px;
+					background-color: #800f94;
+				}
+
+				.bottom-right-button {
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+					flex: 1;
+					text-align: center;
+					font-size: 14px;
+					background-color: blue;
+				}
+			}
+		}
 	}
-	
+
+
+
+
+
+
+
+
 	.no-data {
 		display: flex;
 		flex-direction: column;
@@ -159,156 +219,4 @@
 			color: #800f94;
 		}
 	}
-
-	.list-view {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-
-		.segment {
-			position: sticky;
-			top: 0;
-			left: 0;
-			right: 0;
-			background-color: #333;
-			color: #fff;
-			height: auto;
-			text-align: center;
-		}
-		
-		.review-student-info {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			background-color: aqua;
-			overflow: hidden;
-			bounce
-			.top-area {
-				margin-left: 20rpx;
-				margin-right: 20rpx;
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				background-color: red;
-			}
-		
-			.middle-area {
-				margin-left: 20rpx;
-				margin-right: 20rpx;
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				background-color: green;
-				align-items: center;
-		
-				.info-area {
-					display: flex;
-					flex-direction: column;
-				}
-		
-				.review-status {}
-			}
-		
-			.bottom-area {
-				display: flex;
-				flex-direction: row;
-				justify-content: center;
-				align-items: stretch;
-				background-color: #fff;
-				//overflow: hidden;
-				height: 100rpx;
-				// margin-left: 20rpx;
-				// margin-right: 20rpx;
-			}
-		
-			.bottom-left-button {
-				display: flex;
-				justify-content: center;
-				flex-direction: column;
-				flex: 1;
-				text-align: center;
-				font-size: 14px;
-				background-color: #800f94;
-			}
-		
-			.bottom-right-button {
-				display: flex;
-				justify-content: center;
-				flex-direction: column;
-				flex: 1;
-				text-align: center;
-				font-size: 14px;
-				background-color: blue;
-			}
-		}
-		
-	}
-
-
-	.review-student-info {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		background-color: aqua;
-		overflow: hidden;
-		bounce
-		.top-area {
-			margin-left: 20rpx;
-			margin-right: 20rpx;
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			background-color: red;
-		}
-
-		.middle-area {
-			margin-left: 20rpx;
-			margin-right: 20rpx;
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			background-color: green;
-			align-items: center;
-
-			.info-area {
-				display: flex;
-				flex-direction: column;
-			}
-
-			.review-status {}
-		}
-
-		.bottom-area {
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: stretch;
-			background-color: #fff;
-			//overflow: hidden;
-			height: 100rpx;
-			// margin-left: 20rpx;
-			// margin-right: 20rpx;
-		}
-
-		.bottom-left-button {
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			flex: 1;
-			text-align: center;
-			font-size: 14px;
-			background-color: #800f94;
-		}
-
-		.bottom-right-button {
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			flex: 1;
-			text-align: center;
-			font-size: 14px;
-			background-color: blue;
-		}
-	}
-
 </style>

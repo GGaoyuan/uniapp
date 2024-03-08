@@ -24,154 +24,100 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.container {
+.list.data-v-743a7ac6 {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
-.no-data {
+.list .list-header.data-v-743a7ac6 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  height: 80rpx;
+  text-align: center;
+  z-index: 99;
+}
+.list .list-content.data-v-743a7ac6 {
+  position: -webkit-sticky;
+  position: sticky;
+  margin-top: 80rpx;
+  flex: 1;
+  overflow: auto;
+}
+.list .list-content .list-content-item.data-v-743a7ac6 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  background-color: blue;
+}
+.list .list-content .list-content-item .list-content-item-top.data-v-743a7ac6 {
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: red;
+}
+.list .list-content .list-content-item .list-content-item-mid.data-v-743a7ac6 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: green;
+  align-items: center;
+}
+.list .list-content .list-content-item .list-content-item-mid .info-area.data-v-743a7ac6 {
+  display: flex;
+  flex-direction: column;
+}
+.list .list-content .list-content-item .list-content-item-bottom.data-v-743a7ac6 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #fff;
+  height: 100rpx;
+}
+.list .list-content .list-content-item .bottom-left-button.data-v-743a7ac6 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  background-color: #800f94;
+}
+.list .list-content .list-content-item .bottom-right-button.data-v-743a7ac6 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  background-color: blue;
+}
+.no-data.data-v-743a7ac6 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.no-data .no-data-image {
+.no-data .no-data-image.data-v-743a7ac6 {
   display: flex;
   flex-direction: column;
   height: 200rpx;
   width: 200rpx;
   margin-top: 200rpx;
 }
-.no-data .no-data-title {
+.no-data .no-data-title.data-v-743a7ac6 {
   display: flex;
   flex-direction: column;
   font-size: 36rpx;
   color: #800f94;
-}
-.list-view {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.list-view .segment {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #333;
-  color: #fff;
-  height: auto;
-  text-align: center;
-}
-.list-view .review-student-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: aqua;
-  overflow: hidden;
-}
-.list-view .review-student-info bounce
-.top-area {
-  margin-left: 20rpx;
-  margin-right: 20rpx;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: red;
-}
-.list-view .review-student-info .middle-area {
-  margin-left: 20rpx;
-  margin-right: 20rpx;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: green;
-  align-items: center;
-}
-.list-view .review-student-info .middle-area .info-area {
-  display: flex;
-  flex-direction: column;
-}
-.list-view .review-student-info .bottom-area {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  background-color: #fff;
-  height: 100rpx;
-}
-.list-view .review-student-info .bottom-left-button {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex: 1;
-  text-align: center;
-  font-size: 14px;
-  background-color: #800f94;
-}
-.list-view .review-student-info .bottom-right-button {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex: 1;
-  text-align: center;
-  font-size: 14px;
-  background-color: blue;
-}
-.review-student-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: aqua;
-  overflow: hidden;
-}
-.review-student-info bounce
-.top-area {
-  margin-left: 20rpx;
-  margin-right: 20rpx;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: red;
-}
-.review-student-info .middle-area {
-  margin-left: 20rpx;
-  margin-right: 20rpx;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: green;
-  align-items: center;
-}
-.review-student-info .middle-area .info-area {
-  display: flex;
-  flex-direction: column;
-}
-.review-student-info .bottom-area {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
-  background-color: #fff;
-  height: 100rpx;
-}
-.review-student-info .bottom-left-button {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex: 1;
-  text-align: center;
-  font-size: 14px;
-  background-color: #800f94;
-}
-.review-student-info .bottom-right-button {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  flex: 1;
-  text-align: center;
-  font-size: 14px;
-  background-color: blue;
 }
 

@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"uni_modules/uni-list/components/uni-list/uni-list":1};
+/******/ 		var cssChunks = {"uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox":1,"uni_modules/uni-section/components/uni-section/uni-section":1,"uni_modules/uni-load-more/components/uni-load-more/uni-load-more":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"uni_modules/uni-list/components/uni-list/uni-list":"uni_modules/uni-list/components/uni-list/uni-list"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox":"uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox","uni_modules/uni-section/components/uni-section/uni-section":"uni_modules/uni-section/components/uni-section/uni-section","uni_modules/uni-load-more/components/uni-load-more/uni-load-more":"uni_modules/uni-load-more/components/uni-load-more/uni-load-more"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {

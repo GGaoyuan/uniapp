@@ -98,21 +98,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
+try {
+  components = {
+    uniSection: function () {
+      return __webpack_require__.e(/*! import() | uni_modules/uni-section/components/uni-section/uni-section */ "uni_modules/uni-section/components/uni-section/uni-section").then(__webpack_require__.bind(null, /*! @/uni_modules/uni-section/components/uni-section/uni-section.vue */ 115))
+    },
+    uniDataCheckbox: function () {
+      return Promise.all(/*! import() | uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox")]).then(__webpack_require__.bind(null, /*! @/uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox.vue */ 57))
+    },
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  var g0 = _vm.dataSource.length == 0 && _vm.dataLoaded
-  var g1 = _vm.dataSource.length != 0 && _vm.dataLoaded
-  _vm.$mp.data = Object.assign(
-    {},
-    {
-      $root: {
-        g0: g0,
-        g1: g1,
-      },
-    }
-  )
 }
 var recyclableRender = false
 var staticRenderFns = []
@@ -158,6 +173,17 @@ var _default = {
   data: function data() {
     console.log("script:data");
     return {
+      value: 0,
+      range: [{
+        "value": 0,
+        "text": "篮球"
+      }, {
+        "value": 1,
+        "text": "足球"
+      }, {
+        "value": 2,
+        "text": "游泳"
+      }],
       dataLoaded: false,
       dataSource: []
     };

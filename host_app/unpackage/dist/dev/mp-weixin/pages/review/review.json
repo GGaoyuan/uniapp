@@ -1,7 +1,5 @@
 {
   "navigationBarTitleText": "车辆审核",
   "enablePullDownRefresh": false,
-  "usingComponents": {
-    "uni-list": "/uni_modules/uni-list/components/uni-list/uni-list"
-  }
+  "usingComponents": {}
 }

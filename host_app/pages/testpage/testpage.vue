@@ -8,6 +8,17 @@
 		data() {
 			console.log("script:data");
 			return {
+				value: 0,
+				range: [{
+					"value": 0,
+					"text": "篮球"
+				}, {
+					"value": 1,
+					"text": "足球"
+				}, {
+					"value": 2,
+					"text": "游泳"
+				}],
 				dataLoaded: false,
 				dataSource: [],
 
@@ -53,58 +64,69 @@
 
 
 <template>
-	<view>
-		<view v-if="dataSource.length == 0 && dataLoaded" class="no-data">
-			<image class="no-data-image" src="/static/logo.png"></image>
-			<text class="no-data-title">空的</text>
+	<view class="container">
+		<view class="status-bar">
+			Headerbbb
 		</view>
 
+		<scroll-view class="list" scroll-y rebound="false">
 
-		<view class="list" v-if="dataSource.length != 0 && dataLoaded">
-			<view class="list-header">
-				Headerbbb
-			</view>
 
-			<scroll-view class="list-content" scroll-y rebound="false">
-				<view class="list-content-item" v-for="item in dataSource" :key="item.id">
-					<view class="list-content-item-top">
-						<text class="moto">motoType</text>
-						<text class="time">time</text>
-					</view>
-					<view class="list-content-item-mid">
-						<view class="info-area">
-							<view class="identity-area">
-								<text class="user-job"> jobstudent </text>
-								<text class="user-name">name</text>
-							</view>
-							<text class="user-id">id</text>
-							<text class="user-phone">phone</text>
-							<text class="user-moto-name">motoname</text>
-							<text class="user-moto-color">motname</text>
+			<view class="motor-info">
+				<view class="motor-info-title">
+					<view>分割线</view>
+					<view>车辆信息</view>
+				</view>
+				<view class="motor-info-list">
+					<uni-section title="单选" type="line">
+
+						<view class="uni-px-5 uni-pb-5">
+							<view class="text">单选选中：</view>
+							<uni-data-checkbox v-model="value" :localdata="range" @change="change"></uni-data-checkbox>
 						</view>
-						<text class="review-status">status</text>
+					</uni-section>
+
+					<view class="motor-info-list-selector">
+						<uni-data-checkbox v-model="radio1" :localdata="sex"></uni-data-checkbox>
 					</view>
-					<view class="list-content-item-bottom">
-						<view class=".bottom-left-button" @click="onLeftListItemTap('8848')">取消</view>
-						<view style="width: 10rpx; height: 100%; background-color: red;"></view>
-						<view class=".bottom-right-button" @click="onRightListItemTap('aaaaaaa')">确认</view>
+					<view class="motor-info-list-text">
+						<view>车辆品牌</view>
+						<view>雅迪</view>
+					</view>
+					<view class="motor-info-list-text">
+						<view>车辆颜色</view>
+						<view>黑色</view>
 					</view>
 				</view>
+			</view>
+			<!-- <view class="list-item" v-for="item in dataSource" :key="item.id">
+				<text>{{item.id}}</text>
+			</view> -->
+		</scroll-view>
 
-			</scroll-view>
 
-		</view>
 	</view>
+
 </template>
 
 
 <style lang="scss" scoped>
-	.list {
+	.uni-px-5 {
+		padding-left: 100px;
+		padding-right: 10px;
+	}
+
+	.uni-pb-5 {
+		padding-bottom: 10px;
+	}
+
+
+	.container {
 		display: flex;
 		flex-direction: column;
 		height: 100vh;
 
-		.list-header {
+		.status-bar {
 			position: fixed;
 			top: 0;
 			left: 0;
@@ -116,109 +138,64 @@
 			z-index: 99;
 		}
 
-		.list-content {
-			position: sticky;
-			margin-top: 80rpx;
-			flex: 1;
-			overflow: auto;
 
-			.list-content-item {
+		.list {
+			position: sticky;
+			overflow: auto;
+			margin-top: 80rpx;
+			background-color: red;
+
+
+			.motor-info {
 				display: flex;
 				flex-direction: column;
-				// height: 180rpx;
-				margin-top: 20rpx;
-				margin-bottom: 40rpx;
-				margin-left: 40rpx;
-				margin-right: 40rpx;
-				background-color: blue;
 
-				.list-content-item-top {
+				.motor-info-title {
+					display: flex;
+					flex-direction: row;
+				}
+
+				.motor-info-list {
+					display: flex;
+					flex-direction: column;
 					margin-left: 20rpx;
 					margin-right: 20rpx;
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
-					background-color: red;
-				}
+					margin-bottom: 20rpx;
+					background-color: blue;
 
-				.list-content-item-mid {
-					// margin-left: 20rpx;
-					// margin-right: 20rpx;
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
-					background-color: green;
-					align-items: center;
-
-					.info-area {
+					.motor-info-list-text {
 						display: flex;
-						flex-direction: column;
+						flex-direction: row;
+						justify-content: space-between;
 					}
 
-					.review-status {}
+					.motor-info-list-selector {
+						// display: flex;
+						// flex-direction: row;
+						background-color: yellow;
+						//justify-content: space-between;
+					}
 				}
 
-				.list-content-item-bottom {
-					display: flex;
-					flex-direction: row;
-					justify-content: center;
-					align-items: stretch;
-					background-color: #fff;
-					//overflow: hidden;
-					height: 100rpx;
-					// margin-left: 20rpx;
-					// margin-right: 20rpx;
-				}
-
-				.bottom-left-button {
-					display: flex;
-					justify-content: center;
-					flex-direction: column;
-					flex: 1;
-					text-align: center;
-					font-size: 14px;
-					background-color: #800f94;
-				}
-
-				.bottom-right-button {
-					display: flex;
-					justify-content: center;
-					flex-direction: column;
-					flex: 1;
-					text-align: center;
-					font-size: 14px;
-					background-color: blue;
-				}
 			}
-		}
-	}
 
+			.list-header {
+				height: 100rpx;
+				text-align: center;
+				background-color: blue;
+			}
 
+			.list-item {
+				// display: flex;
+				// flex-direction: column;
+				height: 180rpx;
+				// margin-top: 20rpx;
+				// margin-bottom: 40rpx;
+				// margin-left: 40rpx;
+				// margin-right: 40rpx;
+				background-color: blue;
 
-
-
-
-
-
-	.no-data {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-
-		.no-data-image {
-			display: flex;
-			flex-direction: column;
-			height: 200rpx;
-			width: 200rpx;
-			margin-top: 200rpx;
-		}
-
-		.no-data-title {
-			display: flex;
-			flex-direction: column;
-			font-size: 36rpx;
-			color: #800f94;
+			}
 		}
 	}
 </style>
