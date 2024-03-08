@@ -28,7 +28,7 @@
 				setTimeout(() => {
 					this.dataLoaded = true
 					uni.hideLoading()
-					for (var i = 0; i < 2; i++) {
+					for (var i = 0; i < 20; i++) {
 						const data = {
 							id: i,
 						}
@@ -56,7 +56,6 @@
 			<image class="no-data-image" src="/static/logo.png"></image>
 			<text class="no-data-title">空的</text>
 		</view>
-
 
 		<view class="list" v-if="dataSource.length != 0 && dataLoaded">
 			<view class="list-header">
@@ -92,6 +91,7 @@
 			</scroll-view>
 
 		</view>
+	
 	</view>
 </template>
 

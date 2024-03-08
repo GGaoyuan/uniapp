@@ -101,7 +101,11 @@ exports.default = void 0;
 var _default = {
   onLaunch: function onLaunch() {
     console.log('App Launch');
+    // uni.onTabBarMidButtonTap(() => {
+    // 	console.log('中间按钮的逻辑操作');
+    // })
   },
+
   onShow: function onShow() {
     console.log('App Show');
   },

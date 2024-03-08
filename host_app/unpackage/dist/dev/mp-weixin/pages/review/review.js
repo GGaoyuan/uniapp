@@ -178,7 +178,7 @@ var _default = {
       setTimeout(function () {
         _this.dataLoaded = true;
         uni.hideLoading();
-        for (var i = 0; i < 2; i++) {
+        for (var i = 0; i < 20; i++) {
           var data = {
             id: i
           };

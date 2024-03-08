@@ -66,7 +66,7 @@
 <template>
 	<view class="container">
 		<view class="status-bar">
-			Headerbbb
+			Headerbbbaaa
 		</view>
 
 		<scroll-view class="list" scroll-y rebound="false">
@@ -79,16 +79,12 @@
 				</view>
 				<view class="motor-info-list">
 					<uni-section title="单选" type="line">
-
 						<view class="uni-px-5 uni-pb-5">
 							<view class="text">单选选中：</view>
 							<uni-data-checkbox v-model="value" :localdata="range" @change="change"></uni-data-checkbox>
 						</view>
 					</uni-section>
 
-					<view class="motor-info-list-selector">
-						<uni-data-checkbox v-model="radio1" :localdata="sex"></uni-data-checkbox>
-					</view>
 					<view class="motor-info-list-text">
 						<view>车辆品牌</view>
 						<view>雅迪</view>

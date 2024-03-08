@@ -18102,7 +18102,14 @@ var _default = {
       "iconPath": "static/image/tabbar_icon.png",
       "selectedIconPath": "static/image/tabbar_icon_sel.png",
       "text": "Test"
-    }]
+    }],
+    "midButton": {
+      "width": "136rpx",
+      "height": "150rpx",
+      "text": "Test",
+      "iconPath": "static/image/tabbar_icon.png",
+      "iconWidth": "116rpx"
+    }
   }
 };
 exports.default = _default;
