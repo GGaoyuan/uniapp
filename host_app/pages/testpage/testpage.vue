@@ -1,10 +1,14 @@
 <script>
 	import {
-		reactive
+		reactive,
+		ref
 	} from "vue";
+	import reviewStatusBar from "../../components/review-status-bar.vue"
 
 	export default {
-		components: {},
+		components: {
+			reviewStatusBar,
+		},
 		data() {
 			console.log("script:data");
 			return {
@@ -66,7 +70,9 @@
 <template>
 	<view class="container">
 		<view class="status-bar">
-			Headerbbbaaa
+			<review-status-bar>
+				
+			</review-status-bar>
 		</view>
 
 		<scroll-view class="list" scroll-y rebound="false">
@@ -78,9 +84,8 @@
 					<view>车辆信息</view>
 				</view>
 				<view class="motor-info-list">
-					<uni-section title="单选" type="line">
-						<view class="uni-px-5 uni-pb-5">
-							<view class="text">单选选中：</view>
+					<uni-section>
+						<view >
 							<uni-data-checkbox v-model="value" :localdata="range" @change="change"></uni-data-checkbox>
 						</view>
 					</uni-section>
@@ -93,6 +98,8 @@
 						<view>车辆颜色</view>
 						<view>黑色</view>
 					</view>
+					
+					
 				</view>
 			</view>
 			<!-- <view class="list-item" v-for="item in dataSource" :key="item.id">
@@ -121,7 +128,7 @@
 		display: flex;
 		flex-direction: column;
 		height: 100vh;
-
+		background-color: #F2F2F2;
 		.status-bar {
 			position: fixed;
 			top: 0;
@@ -129,7 +136,7 @@
 			right: 0;
 			background-color: #333;
 			color: #fff;
-			height: 80rpx;
+			height: 120rpx;
 			text-align: center;
 			z-index: 99;
 		}
@@ -138,7 +145,7 @@
 		.list {
 			position: sticky;
 			overflow: auto;
-			margin-top: 80rpx;
+			margin-top: 140rpx;
 			background-color: red;
 
 

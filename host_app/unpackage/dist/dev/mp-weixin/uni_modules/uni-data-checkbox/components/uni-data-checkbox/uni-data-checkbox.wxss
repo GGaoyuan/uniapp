@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -81,10 +80,8 @@
   height: 12px;
   width: 6px;
   left: -5px;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform-origin: center;
+  transform: rotate(45deg);
   opacity: 0;
 }
 .uni-data-checklist .checklist-group .checklist-box .checkbox__inner {
@@ -111,10 +108,8 @@
   border-bottom-color: #fff;
   border-bottom-style: solid;
   opacity: 0;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transform: rotate(40deg);
-          transform: rotate(40deg);
+  transform-origin: center;
+  transform: rotate(40deg);
 }
 .uni-data-checklist .checklist-group .checklist-box .radio__inner {
   display: flex;
@@ -153,8 +148,7 @@
 }
 .uni-data-checklist .checklist-group .checklist-box.is--default.is-checked .checkbox__inner .checkbox__inner-icon {
   opacity: 1;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .uni-data-checklist .checklist-group .checklist-box.is--default.is-checked .radio__inner {
   border-color: #2979ff;
@@ -206,8 +200,7 @@
 }
 .uni-data-checklist .checklist-group .checklist-box.is--button.is-checked .checkbox__inner .checkbox__inner-icon {
   opacity: 1;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .uni-data-checklist .checklist-group .checklist-box.is--button.is-checked .radio__inner {
   border-color: #2979ff;
@@ -265,8 +258,7 @@
 }
 .uni-data-checklist .checklist-group .checklist-box.is--list.is-checked .checkbox__inner .checkbox__inner-icon {
   opacity: 1;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .uni-data-checklist .checklist-group .checklist-box.is--list.is-checked .radio__inner .radio__inner-icon {
   opacity: 1;
@@ -284,4 +276,3 @@
 .uni-data-checklist .checklist-group .checklist-box.is--list.is-checked.is-disable .checklist-text {
   opacity: 0.4;
 }
-

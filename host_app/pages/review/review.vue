@@ -10,7 +10,6 @@
 			return {
 				dataLoaded: false,
 				dataSource: [],
-
 			}
 		},
 		onLoad() {

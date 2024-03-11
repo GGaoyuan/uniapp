@@ -7,7 +7,6 @@
     "pages/review/student-review/student-review",
     "pages/testpage/testpage"
   ],
-  "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "HostApp",
@@ -43,14 +42,7 @@
         "selectedIconPath": "static/image/tabbar_icon_sel.png",
         "text": "Test"
       }
-    ],
-    "midButton": {
-      "width": "136rpx",
-      "height": "150rpx",
-      "text": "Test",
-      "iconPath": "static/image/tabbar_icon.png",
-      "iconWidth": "116rpx"
-    }
+    ]
   },
   "usingComponents": {}
 }

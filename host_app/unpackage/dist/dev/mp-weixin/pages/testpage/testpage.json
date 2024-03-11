@@ -2,7 +2,8 @@
   "navigationBarTitleText": "",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "uni-section": "/uni_modules/uni-section/components/uni-section/uni-section",
-    "uni-data-checkbox": "/uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox"
+    "review-status-bar": "../../components/review-status-bar",
+    "uni-data-checkbox": "../../uni_modules/uni-data-checkbox/components/uni-data-checkbox/uni-data-checkbox",
+    "uni-section": "../../uni_modules/uni-section/components/uni-section/uni-section"
   }
 }

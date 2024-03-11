@@ -1,1 +1,1 @@
-<view><text class="title">{{test}}</text><view data-event-opts="{{[['tap',[['onClickTest',['$event']]]]]}}" bindtap="__e">扫一扫</view></view>
+<view><text class="title">{{a}}</text><view bindtap="{{b}}">扫一扫</view></view>

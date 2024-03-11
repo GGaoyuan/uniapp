@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -24,45 +23,46 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.uni-px-5.data-v-36459ba6 {
+.uni-px-5.data-v-e5415738 {
   padding-left: 100px;
   padding-right: 10px;
 }
-.uni-pb-5.data-v-36459ba6 {
+.uni-pb-5.data-v-e5415738 {
   padding-bottom: 10px;
 }
-.container.data-v-36459ba6 {
+.container.data-v-e5415738 {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: #F2F2F2;
 }
-.container .status-bar.data-v-36459ba6 {
+.container .status-bar.data-v-e5415738 {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background-color: #333;
   color: #fff;
-  height: 80rpx;
+  height: 120rpx;
   text-align: center;
   z-index: 99;
 }
-.container .list.data-v-36459ba6 {
+.container .list.data-v-e5415738 {
   position: -webkit-sticky;
   position: sticky;
   overflow: auto;
-  margin-top: 80rpx;
+  margin-top: 140rpx;
   background-color: red;
 }
-.container .list .motor-info.data-v-36459ba6 {
+.container .list .motor-info.data-v-e5415738 {
   display: flex;
   flex-direction: column;
 }
-.container .list .motor-info .motor-info-title.data-v-36459ba6 {
+.container .list .motor-info .motor-info-title.data-v-e5415738 {
   display: flex;
   flex-direction: row;
 }
-.container .list .motor-info .motor-info-list.data-v-36459ba6 {
+.container .list .motor-info .motor-info-list.data-v-e5415738 {
   display: flex;
   flex-direction: column;
   margin-left: 20rpx;
@@ -70,21 +70,20 @@
   margin-bottom: 20rpx;
   background-color: blue;
 }
-.container .list .motor-info .motor-info-list .motor-info-list-text.data-v-36459ba6 {
+.container .list .motor-info .motor-info-list .motor-info-list-text.data-v-e5415738 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.container .list .motor-info .motor-info-list .motor-info-list-selector.data-v-36459ba6 {
+.container .list .motor-info .motor-info-list .motor-info-list-selector.data-v-e5415738 {
   background-color: yellow;
 }
-.container .list .list-header.data-v-36459ba6 {
+.container .list .list-header.data-v-e5415738 {
   height: 100rpx;
   text-align: center;
   background-color: blue;
 }
-.container .list .list-item.data-v-36459ba6 {
+.container .list .list-item.data-v-e5415738 {
   height: 180rpx;
   background-color: blue;
 }
-
