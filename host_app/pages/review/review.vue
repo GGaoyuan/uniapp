@@ -1,18 +1,25 @@
 <script>
 	import {
-		reactive
+		reactive, ref
 	} from "vue";
-
+	
+	//import ajson from '/static/testjson.js';
+	
 	export default {
+		setup() {
+			const dataSource = ref([]),
+			
+			return { dataSource };
+		},
 		components: {},
 		data() {
-			console.log("script:data");
 			return {
+				//localData: ajson.data,
 				dataLoaded: false,
-				dataSource: [],
 			}
 		},
 		onLoad() {
+			
 			console.log("script:onLoad");
 		},
 		onReady() {
@@ -21,11 +28,16 @@
 		},
 		methods: {
 			loadList() {
+
 				uni.showLoading({
 					title: '加载中'
 				});
 				setTimeout(() => {
 					this.dataLoaded = true
+
+					const json = JSON.stringify(require("../../static/data/testjson.js").reviewData);
+					const list = JSON.parse(json)["list"]
+					console.log("list:" + list);
 					uni.hideLoading()
 					for (var i = 0; i < 20; i++) {
 						const data = {
@@ -90,7 +102,7 @@
 			</scroll-view>
 
 		</view>
-	
+
 	</view>
 </template>
 
