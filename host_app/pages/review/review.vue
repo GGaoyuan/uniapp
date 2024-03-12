@@ -6,14 +6,15 @@
 	//import ajson from '/static/testjson.js';
 	
 	export default {
-		setup() {
-			const dataSource = ref([]),
+		// setup() {
+		// 	const dataSource = ref([]),
 			
-			return { dataSource };
-		},
+		// 	return { dataSource };
+		// },
 		components: {},
 		data() {
 			return {
+				dataSource: [],
 				//localData: ajson.data,
 				dataLoaded: false,
 			}

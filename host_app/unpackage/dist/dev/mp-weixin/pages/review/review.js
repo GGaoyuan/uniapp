@@ -1,12 +1,16 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
 const _sfc_main = {
+  // setup() {
+  // 	const dataSource = ref([]),
+  // 	return { dataSource };
+  // },
   components: {},
   data() {
-    console.log("script:data");
     return {
-      dataLoaded: false,
-      dataSource: []
+      dataSource: [],
+      //localData: ajson.data,
+      dataLoaded: false
     };
   },
   onLoad() {
@@ -23,6 +27,9 @@ const _sfc_main = {
       });
       setTimeout(() => {
         this.dataLoaded = true;
+        const json = JSON.stringify(require("../../static/data/testjson.js").reviewData);
+        const list = JSON.parse(json)["list"];
+        console.log("list:" + list);
         common_vendor.index.hideLoading();
         for (var i = 0; i < 20; i++) {
           const data = {
