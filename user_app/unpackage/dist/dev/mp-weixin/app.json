@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/moto/moto",
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#086d5b",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/moto/moto",
+        "iconPath": "static/image/tabbar_icon.png",
+        "selectedIconPath": "static/image/tabbar_icon_sel.png",
+        "text": "车辆"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/image/tabbar_icon.png",
+        "selectedIconPath": "static/image/tabbar_icon_sel.png",
+        "text": "index"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

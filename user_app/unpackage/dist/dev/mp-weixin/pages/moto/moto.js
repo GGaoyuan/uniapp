@@ -1,10 +1,19 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
+if (!Math) {
+  applyItem();
+}
+const applyItem = () => "./components/moto-apply-item.js";
 const _sfc_main = {
-  __name: "review",
+  __name: "moto",
   setup(__props) {
     let dataSource = common_vendor.ref([]);
     let dataLoaded = common_vendor.ref(false);
+    const ListMsg = {
+      name: "Xiaoma",
+      age: "18",
+      gender: "Boy"
+    };
     common_vendor.onLoad((option) => {
       console.log("script:onLoad");
     });
@@ -24,20 +33,17 @@ const _sfc_main = {
         for (let index = 0; index < resArr.length; index++) {
           let data = resArr[index];
           const model = {
-            status: data["status"]
+            motoType: data["motoType"],
+            status: data["status"],
+            motoColor: data["motoColor"],
+            motoBrand: data["motoBrand"],
+            motoNumber: data["motoNumber"]
           };
           dataSource.value.push(model);
-          console.log(model);
         }
         common_vendor.index.hideLoading();
         console.log("loadList complete");
       }, 500);
-    }
-    function onLeftListItemTap(number) {
-      console.log("onLeftListItemTap");
-    }
-    function onRightListItemTap(value) {
-      console.log("onRightListItemTap");
     }
     return (_ctx, _cache) => {
       return common_vendor.e({
@@ -47,15 +53,17 @@ const _sfc_main = {
       }, common_vendor.unref(dataSource).length != 0 && common_vendor.unref(dataLoaded) ? {
         c: common_vendor.f(common_vendor.unref(dataSource), (item, k0, i0) => {
           return {
-            a: common_vendor.o(($event) => onLeftListItemTap(), item.id),
-            b: common_vendor.o(($event) => onRightListItemTap(), item.id),
-            c: item.id
+            a: item.id,
+            b: "8c279833-0-" + i0
           };
+        }),
+        d: common_vendor.p({
+          list: ListMsg
         })
       } : {});
     };
   }
 };
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-7018a65d"], ["__file", "/Users/zz/HBuilderX/host_app/pages/review/review.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__scopeId", "data-v-8c279833"], ["__file", "/Users/zz/HBuilderX/user_app/pages/moto/moto.vue"]]);
 _sfc_main.__runtimeHooks = 2;
 wx.createPage(MiniProgramPage);

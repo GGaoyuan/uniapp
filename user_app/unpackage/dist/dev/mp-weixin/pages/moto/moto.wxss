@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * 这里是uni-app内置的常用样式变量
  *
@@ -24,35 +23,48 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.uni-list {
+.list.data-v-8c279833 {
   display: flex;
-  background-color: #ffffff;
-  position: relative;
   flex-direction: column;
+  height: 100vh;
+  background-color: #F2F2F2;
 }
-.uni-list--border {
-  position: relative;
-  z-index: -1;
-}
-.uni-list--border-top {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 1px;
-  -webkit-transform: scaleY(0.5);
-  transform: scaleY(0.5);
-  background-color: #e5e5e5;
-  z-index: 1;
-}
-.uni-list--border-bottom {
-  position: absolute;
+.list .regist-moto.data-v-8c279833 {
+  position: fixed;
   bottom: 0;
-  right: 0;
   left: 0;
-  height: 1px;
-  -webkit-transform: scaleY(0.5);
-  transform: scaleY(0.5);
-  background-color: #e5e5e5;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  height: 80rpx;
+  text-align: center;
+  z-index: 99;
 }
-
+.list .list-content.data-v-8c279833 {
+  display: flex;
+  flex-direction: column;
+  position: -webkit-sticky;
+  position: sticky;
+  margin-bottom: 100rpx;
+  flex: 1;
+  overflow: auto;
+}
+.no-data.data-v-8c279833 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.no-data .no-data-image.data-v-8c279833 {
+  display: flex;
+  flex-direction: column;
+  height: 200rpx;
+  width: 200rpx;
+  margin-top: 200rpx;
+}
+.no-data .no-data-title.data-v-8c279833 {
+  display: flex;
+  flex-direction: column;
+  font-size: 36rpx;
+  color: #800f94;
+}

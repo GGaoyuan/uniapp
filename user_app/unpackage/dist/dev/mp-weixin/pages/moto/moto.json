@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "AA车",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "apply-item": "./components/moto-apply-item"
+  }
+}

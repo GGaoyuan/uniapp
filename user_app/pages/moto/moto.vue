@@ -7,9 +7,18 @@
 		onReady,
 		onShareAppMessage
 	} from "@dcloudio/uni-app";
+	import applyItem from "/pages/moto/components/moto-apply-item.vue"
 	
 	let dataSource = ref([]);
 	let dataLoaded = ref(false);
+	
+	let testa = "123123";
+	
+	const ListMsg = {
+	    name:'Xiaoma',
+	    age:'18',
+	    gender:'Boy',
+	}
 	
 	onLoad((option) => {
 		console.log("script:onLoad");
@@ -34,10 +43,14 @@
 			for (let index = 0; index < resArr.length; index++) {
 				let data = resArr[index];
 				const model = {
+					motoType: data["motoType"],
 					status: data["status"],
+					motoColor: data["motoColor"],
+					motoBrand: data["motoBrand"],
+					motoNumber: data["motoNumber"],
 				};
 				dataSource.value.push(model);
-				console.log(model);
+				//console.log(model);
 			}
 			//console.log("list:" + list);
 			uni.hideLoading()
@@ -61,59 +74,7 @@
 		console.log("onRightListItemTap");
 
 	}
-	//import ajson from '/static/testjson.js';
-
-	// export default {
-
-	// 	components: {},
-	// 	data() {
-	// 		return {
-	// 			dataSource: [],
-	// 			//localData: ajson.data,
-	// 			dataLoaded: false,
-	// 		}
-	// 	},
-	// onLoad() {
-
-	// 	console.log("script:onLoad");
-	// },
-	// 	onReady() {
-	// 		console.log("script:onReady");
-	// 		this.loadList();
-	// 	},
-	// 	methods: {
-	// 		loadList() {
-
-	// 			uni.showLoading({
-	// 				title: '加载中'
-	// 			});
-	// 			setTimeout(() => {
-	// 				this.dataLoaded = true
-
-	// 				const json = JSON.stringify(require("../../static/data/testjson.js").reviewData);
-	// 				const list = JSON.parse(json)["list"]
-	// 				console.log("list:" + list);
-	// 				uni.hideLoading()
-	// 				for (var i = 0; i < 20; i++) {
-	// 					const data = {
-	// 						id: i,
-	// 					}
-	// 					this.dataSource.push(data);
-	// 				}
-	// 				console.log("loadList complete");
-	// 			}, 500);
-	// 		},
-
-	// 		onLeftListItemTap(number) {
-	// 			console.log("onLeftListItemTap");
-	// 		},
-
-	// 		onRightListItemTap(value) {
-	// 			console.log("onRightListItemTap");
-
-	// 		},
-	// 	},
-	// }
+	
 </script>
 
 <template>
@@ -124,12 +85,13 @@
 		</view>
 
 		<view class="list" v-if="dataSource.length != 0 && dataLoaded">
-			<view class="list-header">
+			<view class="regist-moto">
 				Headerbbb
 			</view>
 
 			<scroll-view class="list-content" scroll-y rebound="false">
-				<view class="list-content-item" v-for="item in dataSource" :key="item.id">
+				<apply-item v-for="item in dataSource" :key="item.id" :list="ListMsg"></apply-item>
+				<!-- <view class="list-content-item" v-for="item in dataSource" :key="item.id">
 					<view class="list-content-item-top">
 						<text class="moto">motoType</text>
 						<text class="time">time</text>
@@ -152,7 +114,7 @@
 						<view style="width: 10rpx; height: 100%; background-color: red;"></view>
 						<view class=".bottom-right-button" @click="onRightListItemTap('aaaaaaa')">确认</view>
 					</view>
-				</view>
+				</view> -->
 
 			</scroll-view>
 
@@ -167,10 +129,10 @@
 		display: flex;
 		flex-direction: column;
 		height: 100vh;
-
-		.list-header {
+		background-color: #F2F2F2;
+		.regist-moto {
 			position: fixed;
-			top: 0;
+			bottom: 0;
 			left: 0;
 			right: 0;
 			background-color: #333;
@@ -181,79 +143,13 @@
 		}
 
 		.list-content {
+			display: flex;
+			flex-direction: column;
 			position: sticky;
-			margin-top: 80rpx;
+			margin-bottom: 100rpx;
+			//margin-top: 80rpx;
 			flex: 1;
 			overflow: auto;
-
-			.list-content-item {
-				display: flex;
-				flex-direction: column;
-				// height: 180rpx;
-				margin-top: 20rpx;
-				margin-bottom: 40rpx;
-				margin-left: 40rpx;
-				margin-right: 40rpx;
-				background-color: blue;
-
-				.list-content-item-top {
-					margin-left: 20rpx;
-					margin-right: 20rpx;
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
-					background-color: red;
-				}
-
-				.list-content-item-mid {
-					// margin-left: 20rpx;
-					// margin-right: 20rpx;
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
-					background-color: green;
-					align-items: center;
-
-					.info-area {
-						display: flex;
-						flex-direction: column;
-					}
-
-					.review-status {}
-				}
-
-				.list-content-item-bottom {
-					display: flex;
-					flex-direction: row;
-					justify-content: center;
-					align-items: stretch;
-					background-color: #fff;
-					//overflow: hidden;
-					height: 100rpx;
-					// margin-left: 20rpx;
-					// margin-right: 20rpx;
-				}
-
-				.bottom-left-button {
-					display: flex;
-					justify-content: center;
-					flex-direction: column;
-					flex: 1;
-					text-align: center;
-					font-size: 14px;
-					background-color: #800f94;
-				}
-
-				.bottom-right-button {
-					display: flex;
-					justify-content: center;
-					flex-direction: column;
-					flex: 1;
-					text-align: center;
-					font-size: 14px;
-					background-color: blue;
-				}
-			}
 		}
 	}
 
