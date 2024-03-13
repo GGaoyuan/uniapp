@@ -28,12 +28,12 @@
   flex-direction: column;
   height: auto;
   background-color: white;
-  margin-top: 15rpx;
+  margin-top: 30rpx;
   margin-left: 40rpx;
-  margin-bottom: 15rpx;
   margin-right: 40rpx;
   border: 1rpx solid #fff;
   border-radius: 16rpx;
+  padding-bottom: 12rpx;
 }
 .contaiiner .title-area.data-v-4871db27 {
   height: auto;
@@ -46,9 +46,23 @@
   margin-right: 30rpx;
   margin-bottom: 12rpx;
 }
+.contaiiner .title-area .title-style.data-v-4871db27 {
+  font-size: 18px;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 600;
+  color: #222222;
+}
+.contaiiner .title-area .status-text.data-v-4871db27 {
+  font-size: 15px;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 400;
+}
+.contaiiner .title-area .status-color.data-v-4871db27 {
+  color: red;
+}
 .contaiiner .line.data-v-4871db27 {
-  height: 1rpx;
-  background-color: red;
+  height: 0.5rpx;
+  background-color: #F2F2F2;
 }
 .contaiiner .content-item.data-v-4871db27 {
   height: auto;
@@ -60,4 +74,19 @@
   margin-left: 30rpx;
   margin-right: 30rpx;
   margin-bottom: 12rpx;
+}
+.contaiiner .content-item .item-title.data-v-4871db27 {
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #222222;
+}
+.contaiiner .content-item .clear-box.data-v-4871db27 {
+  width: 10rpx;
+}
+.contaiiner .content-item .item-content.data-v-4871db27 {
+  font-size: 24rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #999999;
 }

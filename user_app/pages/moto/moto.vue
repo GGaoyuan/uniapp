@@ -12,13 +12,7 @@
 	let dataSource = ref([]);
 	let dataLoaded = ref(false);
 	
-	let testa = "123123";
-	
-	const ListMsg = {
-	    name:'Xiaoma',
-	    age:'18',
-	    gender:'Boy',
-	}
+	let testa= "ref(false)";
 	
 	onLoad((option) => {
 		console.log("script:onLoad");
@@ -90,7 +84,7 @@
 			</view>
 
 			<scroll-view class="list-content" scroll-y rebound="false">
-				<apply-item v-for="item in dataSource" :key="item.id" :list="ListMsg"></apply-item>
+				<apply-item v-for="item in dataSource" :key="item.id" :data="item" :title="testa"></apply-item>
 				<!-- <view class="list-content-item" v-for="item in dataSource" :key="item.id">
 					<view class="list-content-item-top">
 						<text class="moto">motoType</text>

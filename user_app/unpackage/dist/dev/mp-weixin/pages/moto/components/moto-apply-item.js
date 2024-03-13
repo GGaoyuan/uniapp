@@ -3,26 +3,49 @@ const common_vendor = require("../../../common/vendor.js");
 const _sfc_main = {
   __name: "moto-apply-item",
   props: {
-    list: {
+    data: {
       type: Object,
       default: {}
-    }
+    },
+    title: String
   },
   setup(__props) {
     const props = __props;
+    const typeStr = common_vendor.computed(() => {
+      if (props.data.status == 0) {
+        return "待审核";
+      } else if (props.data.status == 1) {
+        return "已通过";
+      } else if (props.data.status == 2) {
+        return "已安装";
+      } else if (props.data.status == 3) {
+        return "已驳回";
+      } else if (props.data.status == 4) {
+        return "已取消";
+      }
+      return "";
+    });
     common_vendor.onLoad((option) => {
       console.log("script:onLoad");
     });
     common_vendor.onReady(() => {
     });
-    common_vendor.onMounted(() => {
-      console.log("script:onMounted_" + props.list);
-    });
     return (_ctx, _cache) => {
-      return {
-        a: common_vendor.t(props.list.name),
-        b: common_vendor.t(props.list.age)
-      };
+      return common_vendor.e({
+        a: common_vendor.t(props.data.motoType),
+        b: common_vendor.t(common_vendor.unref(typeStr)),
+        c: props.data.motoBrand.length > 0
+      }, props.data.motoBrand.length > 0 ? {
+        d: common_vendor.t(props.data.motoBrand)
+      } : {}, {
+        e: props.data.motoColor.length > 0
+      }, props.data.motoColor.length > 0 ? {
+        f: common_vendor.t(props.data.motoColor)
+      } : {}, {
+        g: props.data.motoNumber.length > 0
+      }, props.data.motoNumber.length > 0 ? {
+        h: common_vendor.t(props.data.motoNumber)
+      } : {});
     };
   }
 };

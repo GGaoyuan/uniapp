@@ -1,9 +1,8 @@
 <script setup>
 	import {
 		reactive,
-		defineComponent,
 		ref,
-		onMounted,
+		computed
 	} from 'vue';
 	import {
 		onLoad,
@@ -11,12 +10,31 @@
 	} from "@dcloudio/uni-app";
 
 	const props = defineProps({
-		list: {
+		data: {
 			type: Object,
 			default: {},
 		},
+		title: String
 	})
 
+	const typeStr = computed(() => {
+		if (props.data.status == 0) {
+			return "待审核";
+		}
+		else if (props.data.status == 1) {
+			return "已通过";
+		}
+		else if (props.data.status == 2) {
+			return "已安装";
+		}
+		else if (props.data.status == 3) {
+			return "已驳回";
+		}
+		else if (props.data.status == 4) {
+			return "已取消";
+		}
+	  return "";
+	})
 	// let test = ref(props.list);
 
 	onLoad((option) => {
@@ -28,22 +46,33 @@
 		//console.log("script:onReady_" + props.list.name);
 	});
 
-	onMounted(() => {
-		console.log("script:onMounted_" + props.list);
-	});
+	// onMounted(() => {
+	// 	console.log("script:onMounted_" + props.list);
+	// });
 </script>
 
 <template>
 	<view class="contaiiner">
 		<view class="title-area">
-			<text>{{ props.list.name }}</text>
-			<text>{{ props.list.age }}</text>
+			<text class="title-style">{{ props.data.motoType }}</text>
+			<text class="status-text status-color">{{ typeStr }}</text>
 		</view>
 		<view class="line"></view>
-		<view class="content-item">
-			<text>aaa</text>
-			<view style="width: 50rpx;"></view>
-			<text>bbb</text>
+
+		<view class="content-item" v-if="props.data.motoBrand.length > 0">
+			<text class="item-title">车辆品牌:</text>
+			<view class="clear-box"></view>
+			<text class="item-content">{{ props.data.motoBrand }}</text>
+		</view>
+		<view class="content-item" v-if="props.data.motoColor.length > 0">
+			<text class="item-title">车辆颜色:</text>
+			<view class="clear-box"></view>
+			<text class="item-content">{{ props.data.motoColor }}</text>
+		</view>
+		<view class="content-item" v-if="props.data.motoNumber.length > 0">
+			<text class="item-title">车辆编号:</text>
+			<view class="clear-box"></view>
+			<text class="item-content">{{ props.data.motoNumber }}</text>
 		</view>
 	</view>
 </template>
@@ -54,13 +83,13 @@
 		flex-direction: column;
 		height: auto;
 		background-color: white;
-		margin-top: 15rpx;
+		margin-top: 30rpx;
 		margin-left: 40rpx;
-		margin-bottom: 15rpx;
 		margin-right: 40rpx;
 		border: 1rpx solid #fff;
 		border-radius: 16rpx;
-
+		padding-bottom: 12rpx;
+		
 		.title-area {
 			height: auto;
 			display: flex;
@@ -72,18 +101,34 @@
 			margin-left: 30rpx;
 			margin-right: 30rpx;
 			margin-bottom: 12rpx;
+
 			// background-color: yellow;
+			.title-style {
+				font-size: 18px;
+				font-family: PingFangSC, PingFangSC-Medium;
+				font-weight: 600;
+				color: #222222;
+			}
+			.status-text {
+				font-size: 15px;
+				font-family: PingFangSC, PingFangSC-Medium;
+				font-weight: 400;
+			}
+			.status-color {
+				color: red;
+			}
 		}
 
 		.line {
-			height: 1rpx;
-			background-color: red;
+			height: 0.5rpx;
+			background-color: #F2F2F2;
 		}
 
 		.content-item {
 			height: auto;
 			display: flex;
 			flex-direction: row;
+			// background-color: red;
 			justify-content: flex-start;
 			align-items: center;
 
@@ -91,6 +136,25 @@
 			margin-left: 30rpx;
 			margin-right: 30rpx;
 			margin-bottom: 12rpx;
+
+			.item-title {
+				font-size: 24rpx;
+				font-family: PingFangSC, PingFangSC-Regular;
+				font-weight: 400;
+				color: #222222;
+			}
+
+			.clear-box {
+				width: 10rpx;
+			}
+
+			.item-content {
+				font-size: 24rpx;
+				font-family: PingFangSC, PingFangSC-Regular;
+				font-weight: 400;
+				color: #999999;
+			}
+
 			// background-color: green;
 		}
 	}

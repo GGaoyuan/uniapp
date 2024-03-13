@@ -9,11 +9,7 @@ const _sfc_main = {
   setup(__props) {
     let dataSource = common_vendor.ref([]);
     let dataLoaded = common_vendor.ref(false);
-    const ListMsg = {
-      name: "Xiaoma",
-      age: "18",
-      gender: "Boy"
-    };
+    let testa = "ref(false)";
     common_vendor.onLoad((option) => {
       console.log("script:onLoad");
     });
@@ -54,11 +50,12 @@ const _sfc_main = {
         c: common_vendor.f(common_vendor.unref(dataSource), (item, k0, i0) => {
           return {
             a: item.id,
-            b: "8c279833-0-" + i0
+            b: "8c279833-0-" + i0,
+            c: common_vendor.p({
+              data: item,
+              title: common_vendor.unref(testa)
+            })
           };
-        }),
-        d: common_vendor.p({
-          list: ListMsg
         })
       } : {});
     };
