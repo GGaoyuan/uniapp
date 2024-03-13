@@ -9,6 +9,7 @@ const reviewData =
             "motoNumber": "AAA000000000",
             "motoRFID": "BBB00000000000"
         },
+		/*
 		{
 		    "motoType": "风车车",
 		    "status": 1,
@@ -73,6 +74,7 @@ const reviewData =
 		    "motoNumber": "AAA33333333333333333",
 		    "motoRFID": "BBB3333333333333333333333"
 		}
+		*/
     ]
 }
 

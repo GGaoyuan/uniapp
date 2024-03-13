@@ -59,7 +59,11 @@
 			console.log("loadList complete");
 		}, 500);
 	}
-
+	
+	function registAction() {
+		console.log("registAction");
+	}
+	
 	function onLeftListItemTap(number) {
 		console.log("onLeftListItemTap");
 	}
@@ -79,12 +83,13 @@
 		</view>
 
 		<view class="list" v-if="dataSource.length != 0 && dataLoaded">
-			<view class="regist-moto">
+			<view class="regist-moto" @click="registAction()">
 				<text>注册车辆信息</text>
 			</view>
 
 			<scroll-view class="list-content" scroll-y rebound="false" enable-flex="true">
 				<apply-item v-for="item in dataSource" :key="item.id" :data="item"></apply-item>
+				<view style="height: 150rpx;"></view>
 			</scroll-view>
 			
 		</view>
@@ -121,11 +126,12 @@
 			display: flex;
 			flex-direction: column;
 			position: sticky;
+			background-color: #F2F2F2;
 			// padding-bottom: 100rpx;
 			margin-bottom: 100rpx;
 			//margin-top: 80rpx;
 			flex: 1;
-			overflow: auto;
+			// overflow: auto;
 		}
 	}
 

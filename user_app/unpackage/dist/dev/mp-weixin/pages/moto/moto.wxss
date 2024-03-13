@@ -51,9 +51,9 @@
   flex-direction: column;
   position: -webkit-sticky;
   position: sticky;
+  background-color: #F2F2F2;
   margin-bottom: 100rpx;
   flex: 1;
-  overflow: auto;
 }
 .no-data.data-v-8c279833 {
   display: flex;

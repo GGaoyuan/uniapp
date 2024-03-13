@@ -40,13 +40,17 @@ const _sfc_main = {
         console.log("loadList complete");
       }, 500);
     }
+    function registAction() {
+      console.log("registAction");
+    }
     return (_ctx, _cache) => {
       return common_vendor.e({
         a: common_vendor.unref(dataSource).length == 0 && common_vendor.unref(dataLoaded)
       }, common_vendor.unref(dataSource).length == 0 && common_vendor.unref(dataLoaded) ? {} : {}, {
         b: common_vendor.unref(dataSource).length != 0 && common_vendor.unref(dataLoaded)
       }, common_vendor.unref(dataSource).length != 0 && common_vendor.unref(dataLoaded) ? {
-        c: common_vendor.f(common_vendor.unref(dataSource), (item, k0, i0) => {
+        c: common_vendor.o(($event) => registAction()),
+        d: common_vendor.f(common_vendor.unref(dataSource), (item, k0, i0) => {
           return {
             a: item.id,
             b: "8c279833-0-" + i0,
