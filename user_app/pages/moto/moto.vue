@@ -80,13 +80,13 @@
 
 		<view class="list" v-if="dataSource.length != 0 && dataLoaded">
 			<view class="regist-moto">
-				Headerbbb
+				<text>注册车辆信息</text>
 			</view>
 
 			<scroll-view class="list-content" scroll-y rebound="false" enable-flex="true">
 				<apply-item v-for="item in dataSource" :key="item.id" :data="item"></apply-item>
 			</scroll-view>
-
+			
 		</view>
 
 	</view>
@@ -100,14 +100,20 @@
 		height: 100vh;
 		background-color: #F2F2F2;
 		.regist-moto {
+			display: flex;
+			flex-direction: column;
 			position: fixed;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			background-color: #333;
+			bottom: 20rpx;
+			left: 50rpx;
+			right: 50rpx;
+			background-color: #3D77F0;
 			color: #fff;
 			height: 80rpx;
 			text-align: center;
+			justify-content: center;
+			align-items: center;
+			border: 1rpx solid #3D77F0;
+			border-radius: 20rpx;
 			z-index: 99;
 		}
 
@@ -115,6 +121,7 @@
 			display: flex;
 			flex-direction: column;
 			position: sticky;
+			// padding-bottom: 100rpx;
 			margin-bottom: 100rpx;
 			//margin-top: 80rpx;
 			flex: 1;
