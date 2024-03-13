@@ -9,7 +9,6 @@ const _sfc_main = {
   setup(__props) {
     let dataSource = common_vendor.ref([]);
     let dataLoaded = common_vendor.ref(false);
-    let testa = "ref(false)";
     common_vendor.onLoad((option) => {
       console.log("script:onLoad");
     });
@@ -52,8 +51,7 @@ const _sfc_main = {
             a: item.id,
             b: "8c279833-0-" + i0,
             c: common_vendor.p({
-              data: item,
-              title: common_vendor.unref(testa)
+              data: item
             })
           };
         })

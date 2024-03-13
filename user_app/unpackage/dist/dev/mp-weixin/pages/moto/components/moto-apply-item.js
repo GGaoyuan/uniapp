@@ -6,22 +6,37 @@ const _sfc_main = {
     data: {
       type: Object,
       default: {}
-    },
-    title: String
+    }
+    //title: String
   },
   setup(__props) {
     const props = __props;
-    const typeStr = common_vendor.computed(() => {
+    const status = common_vendor.computed(() => {
       if (props.data.status == 0) {
-        return "待审核";
+        return {
+          text: "待审核",
+          color: "#3D77F0"
+        };
       } else if (props.data.status == 1) {
-        return "已通过";
+        return {
+          text: "已通过",
+          color: "orange"
+        };
       } else if (props.data.status == 2) {
-        return "已安装";
+        return {
+          text: "已安装",
+          color: "orange"
+        };
       } else if (props.data.status == 3) {
-        return "已驳回";
+        return {
+          text: "已驳回",
+          color: "red"
+        };
       } else if (props.data.status == 4) {
-        return "已取消";
+        return {
+          text: "已取消",
+          color: "red"
+        };
       }
       return "";
     });
@@ -33,18 +48,19 @@ const _sfc_main = {
     return (_ctx, _cache) => {
       return common_vendor.e({
         a: common_vendor.t(props.data.motoType),
-        b: common_vendor.t(common_vendor.unref(typeStr)),
-        c: props.data.motoBrand.length > 0
+        b: common_vendor.t(common_vendor.unref(status).text),
+        c: common_vendor.unref(status).color,
+        d: props.data.motoBrand.length > 0
       }, props.data.motoBrand.length > 0 ? {
-        d: common_vendor.t(props.data.motoBrand)
+        e: common_vendor.t(props.data.motoBrand)
       } : {}, {
-        e: props.data.motoColor.length > 0
+        f: props.data.motoColor.length > 0
       }, props.data.motoColor.length > 0 ? {
-        f: common_vendor.t(props.data.motoColor)
+        g: common_vendor.t(props.data.motoColor)
       } : {}, {
-        g: props.data.motoNumber.length > 0
+        h: props.data.motoNumber.length > 0
       }, props.data.motoNumber.length > 0 ? {
-        h: common_vendor.t(props.data.motoNumber)
+        i: common_vendor.t(props.data.motoNumber)
       } : {});
     };
   }

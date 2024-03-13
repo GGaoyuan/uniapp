@@ -14,29 +14,43 @@
 			type: Object,
 			default: {},
 		},
-		title: String
+		//title: String
 	})
 
-	const typeStr = computed(() => {
+	const status = computed(() => {
 		if (props.data.status == 0) {
-			return "待审核";
+			return {
+				text: "待审核",
+				color: "#3D77F0"
+			};
 		}
 		else if (props.data.status == 1) {
-			return "已通过";
+			return {
+				text: "已通过",
+				color: "orange"
+			};
 		}
 		else if (props.data.status == 2) {
-			return "已安装";
+			return {
+				text: "已安装",
+				color: "orange"
+			};
 		}
 		else if (props.data.status == 3) {
-			return "已驳回";
+			return {
+				text: "已驳回",
+				color: "red"
+			};
 		}
 		else if (props.data.status == 4) {
-			return "已取消";
+			return {
+				text: "已取消",
+				color: "red"
+			};
 		}
 	  return "";
 	})
-	// let test = ref(props.list);
-
+		
 	onLoad((option) => {
 		console.log("script:onLoad");
 
@@ -55,7 +69,7 @@
 	<view class="contaiiner">
 		<view class="title-area">
 			<text class="title-style">{{ props.data.motoType }}</text>
-			<text class="status-text status-color">{{ typeStr }}</text>
+			<text class="status-text" v-bind:style="{color: status.color}">{{ status.text }}</text>
 		</view>
 		<view class="line"></view>
 

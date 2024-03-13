@@ -83,33 +83,8 @@
 				Headerbbb
 			</view>
 
-			<scroll-view class="list-content" scroll-y rebound="false">
-				<apply-item v-for="item in dataSource" :key="item.id" :data="item" :title="testa"></apply-item>
-				<!-- <view class="list-content-item" v-for="item in dataSource" :key="item.id">
-					<view class="list-content-item-top">
-						<text class="moto">motoType</text>
-						<text class="time">time</text>
-					</view>
-					<view class="list-content-item-mid">
-						<view class="info-area">
-							<view class="identity-area">
-								<text class="user-job"> jobstudent </text>
-								<text class="user-name">name</text>
-							</view>
-							<text class="user-id">id</text>
-							<text class="user-phone">phone</text>
-							<text class="user-moto-name">motoname</text>
-							<text class="user-moto-color">motname</text>
-						</view>
-						<text class="review-status">status</text>
-					</view>
-					<view class="list-content-item-bottom">
-						<view class=".bottom-left-button" @click="onLeftListItemTap('8848')">取消</view>
-						<view style="width: 10rpx; height: 100%; background-color: red;"></view>
-						<view class=".bottom-right-button" @click="onRightListItemTap('aaaaaaa')">确认</view>
-					</view>
-				</view> -->
-
+			<scroll-view class="list-content" scroll-y rebound="false" enable-flex="true">
+				<apply-item v-for="item in dataSource" :key="item.id" :data="item"></apply-item>
 			</scroll-view>
 
 		</view>
