@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/moto/moto",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/regist/regist"
   ],
   "window": {
     "navigationBarTextStyle": "black",

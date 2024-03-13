@@ -12,6 +12,14 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
+		},
+		{
+			"path" : "pages/regist/regist",
+			"style" : 
+			{
+				"navigationBarTitleText" : "注册车辆信息",
+				"enablePullDownRefresh" : false
+			}
 		}
 	],
 	"globalStyle": {

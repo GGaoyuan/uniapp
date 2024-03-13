@@ -23,34 +23,30 @@
 				text: "待审核",
 				color: "#3D77F0"
 			};
-		}
-		else if (props.data.status == 1) {
+		} else if (props.data.status == 1) {
 			return {
 				text: "已通过",
 				color: "orange"
 			};
-		}
-		else if (props.data.status == 2) {
+		} else if (props.data.status == 2) {
 			return {
 				text: "已安装",
 				color: "orange"
 			};
-		}
-		else if (props.data.status == 3) {
+		} else if (props.data.status == 3) {
 			return {
 				text: "已驳回",
 				color: "red"
 			};
-		}
-		else if (props.data.status == 4) {
+		} else if (props.data.status == 4) {
 			return {
 				text: "已取消",
 				color: "red"
 			};
 		}
-	  return "";
+		return "";
 	})
-		
+
 	onLoad((option) => {
 		console.log("script:onLoad");
 
@@ -103,7 +99,7 @@
 		border: 1rpx solid #fff;
 		border-radius: 16rpx;
 		padding-bottom: 12rpx;
-		
+
 		.title-area {
 			height: auto;
 			display: flex;
@@ -123,13 +119,11 @@
 				font-weight: 600;
 				color: #222222;
 			}
+
 			.status-text {
 				font-size: 15px;
 				font-family: PingFangSC, PingFangSC-Medium;
 				font-weight: 400;
-			}
-			.status-color {
-				color: red;
 			}
 		}
 
@@ -144,7 +138,8 @@
 			flex-direction: row;
 			// background-color: red;
 			justify-content: flex-start;
-			align-items: center;
+			
+			align-items: baseline;
 
 			margin-top: 12rpx;
 			margin-left: 30rpx;
@@ -156,6 +151,7 @@
 				font-family: PingFangSC, PingFangSC-Regular;
 				font-weight: 400;
 				color: #222222;
+				word-break: keep-all;
 			}
 
 			.clear-box {
@@ -163,6 +159,11 @@
 			}
 
 			.item-content {
+				// display: flex;
+				// align-items: baseline;
+				word-break: break-all;
+				// word-wrap: break-word;
+				// margin-right: 50rpx;
 				font-size: 24rpx;
 				font-family: PingFangSC, PingFangSC-Regular;
 				font-weight: 400;

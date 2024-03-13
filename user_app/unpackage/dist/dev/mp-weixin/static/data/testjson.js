@@ -6,7 +6,7 @@ const reviewData =
             "status": 0,
             "motoColor": "黑色",
             "motoBrand": "雅迪",
-            "motoNumber": "AAA000000000",
+            "motoNumber": "AAA00000000011111111111111111111",
             "motoRFID": "BBB00000000000"
         },
 		/*

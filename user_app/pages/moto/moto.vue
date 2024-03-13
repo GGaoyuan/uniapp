@@ -48,29 +48,15 @@
 			}
 			//console.log("list:" + list);
 			uni.hideLoading()
-			
-			//for (let i = 0; i < list; i++) {
-				
-				// const data = {
-				// 	id: i,
-				// }
-				// dataSource.value.push(data);
-			// }
 			console.log("loadList complete");
 		}, 500);
 	}
 	
 	function registAction() {
-		console.log("registAction");
-	}
-	
-	function onLeftListItemTap(number) {
-		console.log("onLeftListItemTap");
-	}
-
-	function onRightListItemTap(value) {
-		console.log("onRightListItemTap");
-
+		uni.navigateTo({
+			url:'../regist/regist'
+		});
+		//console.log("registAction");
 	}
 	
 </script>

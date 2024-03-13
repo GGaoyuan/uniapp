@@ -4,6 +4,7 @@ const common_vendor = require("./common/vendor.js");
 if (!Math) {
   "./pages/moto/moto.js";
   "./pages/index/index.js";
+  "./pages/regist/regist.js";
 }
 const _sfc_main = {
   onLaunch: function() {

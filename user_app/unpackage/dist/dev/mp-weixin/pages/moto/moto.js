@@ -41,7 +41,9 @@ const _sfc_main = {
       }, 500);
     }
     function registAction() {
-      console.log("registAction");
+      common_vendor.index.navigateTo({
+        url: "../regist/regist"
+      });
     }
     return (_ctx, _cache) => {
       return common_vendor.e({
