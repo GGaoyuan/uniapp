@@ -2,7 +2,8 @@
   "pages": [
     "pages/moto/moto",
     "pages/index/index",
-    "pages/regist/regist"
+    "pages/regist/regist",
+    "pages/regist/components/regist-userinfo"
   ],
   "window": {
     "navigationBarTextStyle": "black",

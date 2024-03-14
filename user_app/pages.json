@@ -1,57 +1,62 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/moto/moto",
-			"style": {
-				"navigationBarTitleText": "AA车",
-				"enablePullDownRefresh": false
-			}
-		},
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
-		},
-		{
-			"path" : "pages/regist/regist",
-			"style" : 
-			{
-				"navigationBarTitleText" : "注册车辆信息",
-				"enablePullDownRefresh" : false
-			}
-		}
-	],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	},
-	"uniIdRouter": {},
-	"tabBar": {
-		"color": "#7A7E83",
-		"selectedColor": "#086d5b",
-		"backgroundColor": "#ffffff",
-		"list": [{
-				"pagePath": "pages/moto/moto",
-				"iconPath": "static/image/tabbar_icon.png",
-				"selectedIconPath": "static/image/tabbar_icon_sel.png",
-				"text": "车辆"
-			},
-			{
-				"pagePath": "pages/index/index",
-				"iconPath": "static/image/tabbar_icon.png",
-				"selectedIconPath": "static/image/tabbar_icon_sel.png",
-				"text": "index"
-			}
-		],
-		"midButton": {
-			"width": "136rpx",
-			"height": "150rpx",
-			"text": "Test",
-			"iconPath": "static/image/tabbar_icon.png",
-			"iconWidth": "116rpx"
-		}
-	}
+    "pages" : [
+        //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+        {
+            "path" : "pages/moto/moto",
+            "style" : {
+                "navigationBarTitleText" : "AA车",
+                "enablePullDownRefresh" : false
+            }
+        },
+        {
+            "path" : "pages/index/index",
+            "style" : {
+                "navigationBarTitleText" : "uni-app"
+            }
+        },
+        {
+            "path" : "pages/regist/regist",
+            "style" : {
+                "navigationBarTitleText" : "注册车辆信息",
+                "enablePullDownRefresh" : false
+            }
+        },
+        {
+            "path" : "pages/regist/components/regist-userinfo",
+            "style" : {}
+        }
+    ],
+    "globalStyle" : {
+        "navigationBarTextStyle" : "black",
+        "navigationBarTitleText" : "uni-app",
+        "navigationBarBackgroundColor" : "#F8F8F8",
+        "backgroundColor" : "#F8F8F8"
+    },
+    "uniIdRouter" : {},
+    "tabBar" : {
+        "color" : "#7A7E83",
+        "selectedColor" : "#086d5b",
+        "backgroundColor" : "#ffffff",
+        "list" : [
+            {
+                "pagePath" : "pages/moto/moto",
+                "iconPath" : "static/image/tabbar_icon.png",
+                "selectedIconPath" : "static/image/tabbar_icon_sel.png",
+                "text" : "车辆"
+            },
+            {
+                "pagePath" : "pages/index/index",
+                "iconPath" : "static/image/tabbar_icon.png",
+                "selectedIconPath" : "static/image/tabbar_icon_sel.png",
+                "text" : "index"
+            }
+        ],
+        "midButton" : {
+            "width" : "136rpx",
+            "height" : "150rpx",
+            "text" : "Test",
+            "iconPath" : "static/image/tabbar_icon.png",
+            "iconWidth" : "116rpx"
+        }
+    }
 }

@@ -5,6 +5,7 @@ if (!Math) {
   "./pages/moto/moto.js";
   "./pages/index/index.js";
   "./pages/regist/regist.js";
+  "./pages/regist/components/regist-userinfo.js";
 }
 const _sfc_main = {
   onLaunch: function() {

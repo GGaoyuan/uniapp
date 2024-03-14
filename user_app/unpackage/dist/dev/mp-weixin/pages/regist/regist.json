@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "注册车辆信息",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "title-header": "./components/regist-header",
+    "userinfo": "./components/regist-userinfo"
+  }
+}
