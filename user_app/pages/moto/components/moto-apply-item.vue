@@ -88,14 +88,16 @@
 </template>
 
 <style scoped lang="scss">
+	@import '@/common/common.scss';
+	
 	.contaiiner {
 		display: flex;
 		flex-direction: column;
 		height: auto;
 		background-color: white;
 		margin-top: 30rpx;
-		margin-left: 40rpx;
-		margin-right: 40rpx;
+		margin-left: $app-container-margin-hor;
+		margin-right: $app-container-margin-hor;
 		border: 1rpx solid #fff;
 		border-radius: 16rpx;
 		padding-bottom: 12rpx;
@@ -108,8 +110,8 @@
 			align-items: center;
 
 			margin-top: 12rpx;
-			margin-left: 30rpx;
-			margin-right: 30rpx;
+			margin-left: $app-content-margin-hor;
+			margin-right: $app-content-margin-hor;
 			margin-bottom: 12rpx;
 
 			// background-color: yellow;
@@ -142,8 +144,8 @@
 			align-items: baseline;
 
 			margin-top: 12rpx;
-			margin-left: 30rpx;
-			margin-right: 30rpx;
+			margin-left: $app-content-margin-hor;
+			margin-right: $app-content-margin-hor;
 			margin-bottom: 12rpx;
 
 			.item-title {

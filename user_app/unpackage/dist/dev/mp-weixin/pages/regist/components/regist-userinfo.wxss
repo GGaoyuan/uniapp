@@ -23,38 +23,35 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.text.data-v-b1d136e1 {
-  font-size: 12px;
-  color: #666;
-  margin-top: 5px;
-}
-.uni-px-5.data-v-b1d136e1 {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-.uni-pb-5.data-v-b1d136e1 {
-  padding-bottom: 10px;
-}
 .content.data-v-b1d136e1 {
   display: flex;
   flex-direction: column;
   background-color: yellow;
   margin-left: 40rpx;
   margin-right: 40rpx;
-  padding-top: 50rpx;
-  padding-bottom: 50rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
   border: 1rpx solid white;
   border-radius: 20rpx;
 }
 .content .checkbox.data-v-b1d136e1 {
   display: flex;
   flex-direction: row;
+  background-color: red;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  justify-content: space-between;
 }
-.content .checkbox .checklist-text.data-v-b1d136e1 {
-  font-size: 80px;
-  color: #666;
-  margin-left: 5px;
-  line-height: 80px;
+.content .textField.data-v-b1d136e1 {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  justify-content: space-between;
 }
 .titleText.data-v-b1d136e1 {
   margin-left: 15rpx;

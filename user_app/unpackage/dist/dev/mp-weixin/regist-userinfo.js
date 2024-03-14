@@ -11,7 +11,7 @@ if (!Math) {
 const _sfc_main = {
   __name: "regist-userinfo",
   setup(__props) {
-    const identity = [{
+    const identitys = [{
       text: "学生",
       value: 0
     }, {
@@ -21,17 +21,17 @@ const _sfc_main = {
       text: "其他",
       value: 2
     }];
-    let radio1 = 0;
+    let userIdentity = 0;
     function change() {
       console.log("change");
     }
     return (_ctx, _cache) => {
       return {
         a: common_vendor.o(change),
-        b: common_vendor.o(($event) => common_vendor.isRef(radio1) ? radio1.value = $event : radio1 = $event),
+        b: common_vendor.o(($event) => common_vendor.isRef(userIdentity) ? userIdentity.value = $event : userIdentity = $event),
         c: common_vendor.p({
-          localdata: identity,
-          modelValue: common_vendor.unref(radio1)
+          localdata: identitys,
+          modelValue: common_vendor.unref(userIdentity)
         })
       };
     };
