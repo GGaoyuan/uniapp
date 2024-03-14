@@ -453,7 +453,7 @@
 
 <style lang="scss">
 	$uni-primary: #2979ff !default;
-	$border-color: #DCDFE6;
+	$border-color: #66AAAA;
 	$disable:0.4;
 
 	@mixin flex {
@@ -507,8 +507,8 @@
 					align-items: center;
 					justify-content: space-between;
 					.checklist-text {
-						font-size: 14px;
-						color: #666;
+						font-size: 40rpx;
+						color: #66AAAA;
 						margin-left: 5px;
 						line-height: 14px;
 					}

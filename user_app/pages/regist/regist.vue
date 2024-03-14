@@ -18,10 +18,8 @@
 	<view class="container">
 		<titleHeader :title="userinfoTitle"></titleHeader>
 			
-		<userinfo>
-
-		</userinfo>
-
+		<userinfo></userinfo>
+		
 		<titleHeader :title="carinfoTitle"></titleHeader>
 
 		<!-- <view class="input-container">

@@ -1,53 +1,32 @@
 <script setup>
-	// import uni-section from "uview-ui"
 	// const props = defineProps({
 	// 	title: String,
 	// })
-	const sex = [{
-		text: '男',
+	const identity = [{
+		text: '学生',
 		value: 0
 	}, {
-		text: '女',
+		text: '教职工',
 		value: 1
 	}, {
-		text: '未知',
+		text: '其他',
 		value: 2
 	}];
 	let radio1 = 0;
 
-	var value = 0;
-	var range = [{
-		"value": 0,
-		"text": "篮球"
-	}, {
-		"value": 1,
-		"text": "足球"
-	}, {
-		"value": 2,
-		"text": "游泳"
-	}];
+	function change() {
+		console.log("change");
+	}
 </script>
 
 <template>
 	<view class="content">
-		<text class="titleText">asdasdadasdas</text>
+		<text class="titleText">222</text>
 
-
-
-
-		<uni-section title="单选" type="line">
-			<view class="uni-px-5 uni-pb-5">
-				<view class="text">单bbb选选中：{{JSON.stringify(radio1)}}</view>
-				<uni-data-checkbox v-model="radio1" :localdata="sex"></uni-data-checkbox>
-			</view>
-		</uni-section>
-
-		<uni-section>
-			<view>
-				<uni-data-checkbox v-model="value" :localdata="range"></uni-data-checkbox>
-				
-			</view>
-		</uni-section>
+		<view class="checkbox">
+			<text>身份</text>
+			<uni-data-checkbox v-model="radio1" :localdata="identity" @change="change"></uni-data-checkbox>
+		</view>
 
 
 	</view>
@@ -80,6 +59,19 @@
 		padding-bottom: 50rpx;
 		border: 1rpx solid white;
 		border-radius: 20rpx;
+
+		.checkbox {
+			display: flex;
+			flex-direction: row;
+
+			.checklist-text {
+				font-size: 80px;
+				color: #666;
+				margin-left: 5px;
+				line-height: 80px;
+			}
+		}
+
 	}
 
 	.titleText {

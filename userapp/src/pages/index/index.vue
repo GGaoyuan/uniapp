@@ -11,7 +11,7 @@
 	export default {
 		data() {
 			return {
-				title: 'Helloaaaaaaaaa'
+				title: 'axiba'
 			}
 		},
 		onLoad() {

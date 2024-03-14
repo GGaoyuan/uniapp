@@ -46,6 +46,16 @@
   border: 1rpx solid white;
   border-radius: 20rpx;
 }
+.content .checkbox.data-v-b1d136e1 {
+  display: flex;
+  flex-direction: row;
+}
+.content .checkbox .checklist-text.data-v-b1d136e1 {
+  font-size: 80px;
+  color: #666;
+  margin-left: 5px;
+  line-height: 80px;
+}
 .titleText.data-v-b1d136e1 {
   margin-left: 15rpx;
   color: #222222;

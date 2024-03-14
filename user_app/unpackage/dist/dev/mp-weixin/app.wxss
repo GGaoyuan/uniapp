@@ -1,3 +1,8 @@
 
 	/*每个页面公共css */
+.appBlueColor {
+		/* color: #3D77F0  蓝色*/
+		/* color: #222222; 黑色 */
+		/* #999999  灰色 */
+}
 page{--status-bar-height:25px;--top-window-height:0px;--window-top:0px;--window-bottom:0px;--window-left:0px;--window-right:0px;--window-magin:0px}[data-c-h="true"]{display: none !important;}
