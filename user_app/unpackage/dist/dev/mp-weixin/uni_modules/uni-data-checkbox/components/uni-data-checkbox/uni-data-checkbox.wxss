@@ -23,6 +23,11 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.regular-font {
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: normal;
+}
 .uni-data-loading {
   display: flex;
   flex-direction: row;

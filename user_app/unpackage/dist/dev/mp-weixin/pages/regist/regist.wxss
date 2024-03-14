@@ -23,6 +23,11 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.regular-font.data-v-e76916ba {
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: normal;
+}
 .header.data-v-e76916ba {
   height: 88rpx;
   background-color: red;

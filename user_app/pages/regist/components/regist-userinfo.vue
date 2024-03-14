@@ -21,19 +21,19 @@
 
 <template>
 	<view class="content">
-		<view class="checkbox">
+		<view class="common-context">
 			<text>身份</text>
 			<uni-data-checkbox v-model="userIdentity" :localdata="identitys" @change="change"></uni-data-checkbox>
 		</view>
-		<view class="textField">
+		<view class="common-context">
 			<text>身份</text>
 			<input placeholder="自动获得焦点" style="background-color: red; text-align: right;"/>
 		</view>
-		<view class="textField">
+		<view class="common-context">
 			<text>身份</text>
 			<input placeholder="自动获得焦点" />
 		</view>
-		<view class="textField">
+		<view class="common-context">
 			<text>身份</text>
 			<input placeholder="自动获得焦点" />
 		</view>
@@ -54,6 +54,17 @@
 		border: 1rpx solid white;
 		border-radius: 20rpx;
 
+		.common-context {
+			display: flex;
+			flex-direction: row;
+			background-color: red;
+			margin-left: 30rpx;
+			margin-right: 30rpx;
+			padding-top: 10rpx;
+			padding-bottom: 10rpx;
+			justify-content: space-between;
+			text-align: right;
+		}
 		.checkbox {
 			display: flex;
 			flex-direction: row;

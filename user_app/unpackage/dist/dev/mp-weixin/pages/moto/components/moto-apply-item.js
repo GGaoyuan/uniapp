@@ -48,8 +48,8 @@ const _sfc_main = {
     return (_ctx, _cache) => {
       return common_vendor.e({
         a: common_vendor.t(props.data.motoType),
-        b: common_vendor.t(common_vendor.unref(status).text),
-        c: common_vendor.unref(status).color,
+        b: common_vendor.t(status.value.text),
+        c: status.value.color,
         d: props.data.motoBrand.length > 0
       }, props.data.motoBrand.length > 0 ? {
         e: common_vendor.t(props.data.motoBrand)

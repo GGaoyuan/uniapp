@@ -23,6 +23,11 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.regular-font.data-v-6548a269 {
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: normal;
+}
 .content.data-v-6548a269 {
   display: flex;
   flex-direction: row;

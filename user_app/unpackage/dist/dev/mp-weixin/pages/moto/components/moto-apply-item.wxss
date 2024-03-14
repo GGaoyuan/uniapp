@@ -23,6 +23,11 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.regular-font.data-v-4871db27 {
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: normal;
+}
 .contaiiner.data-v-4871db27 {
   display: flex;
   flex-direction: column;
@@ -47,15 +52,15 @@
   margin-bottom: 12rpx;
 }
 .contaiiner .title-area .title-style.data-v-4871db27 {
-  font-size: 18px;
-  font-family: PingFangSC, PingFangSC-Medium;
-  font-weight: 600;
+  font-size: 40rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: bold;
   color: #222222;
 }
 .contaiiner .title-area .status-text.data-v-4871db27 {
-  font-size: 15px;
-  font-family: PingFangSC, PingFangSC-Medium;
-  font-weight: 400;
+  font-size: 30rpx;
+  font-family: PingFangSC-Medium;
+  font-weight: bold;
 }
 .contaiiner .line.data-v-4871db27 {
   height: 0.5rpx;
@@ -73,9 +78,9 @@
   margin-bottom: 12rpx;
 }
 .contaiiner .content-item .item-title.data-v-4871db27 {
-  font-size: 24rpx;
-  font-family: PingFangSC, PingFangSC-Regular;
-  font-weight: 400;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: normal;
   color: #222222;
   word-break: keep-all;
 }
@@ -84,8 +89,8 @@
 }
 .contaiiner .content-item .item-content.data-v-4871db27 {
   word-break: break-all;
-  font-size: 24rpx;
-  font-family: PingFangSC, PingFangSC-Regular;
-  font-weight: 400;
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: normal;
   color: #999999;
 }

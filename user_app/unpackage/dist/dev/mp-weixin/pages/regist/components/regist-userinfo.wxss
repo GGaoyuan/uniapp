@@ -23,6 +23,11 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.regular-font.data-v-b1d136e1 {
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular;
+  font-weight: normal;
+}
 .content.data-v-b1d136e1 {
   display: flex;
   flex-direction: column;
@@ -33,6 +38,17 @@
   padding-bottom: 20rpx;
   border: 1rpx solid white;
   border-radius: 20rpx;
+}
+.content .common-context.data-v-b1d136e1 {
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  justify-content: space-between;
+  text-align: right;
 }
 .content .checkbox.data-v-b1d136e1 {
   display: flex;

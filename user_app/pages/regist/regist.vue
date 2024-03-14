@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 	import {
 		ref
 	} from "vue";
@@ -6,12 +6,12 @@
 		onLoad,
 		onReady,
 	} from "@dcloudio/uni-app";
-	import titleHeader from "/pages/regist/components/regist-header.vue"
-	import userinfo from "/pages/regist/components/regist-userinfo.vue"
-	import carinfo from "/pages/regist/components/regist-carinfo.vue"
-
-	const userinfoTitle = "用户信息";
-	const carinfoTitle = "车辆信息";
+	import titleHeader from "@/pages/regist/components/regist-header.vue"
+	import userinfo from "@/pages/regist/components/regist-userinfo.vue"
+	import carinfo from "@/pages/regist/components/regist-carinfo.vue"
+	
+	let userinfoTitle = "用户信息";
+	let carinfoTitle = "车辆信息";
 </script>
 
 <template>
@@ -22,13 +22,9 @@
 		
 		<titleHeader :title="carinfoTitle"></titleHeader>
 
-		<!-- <view class="input-container">
-
-		</view> -->
-
-		<view class="header"></view>
-
-
+		<carinfo></carinfo>
+		
+		
 
 	</view>
 </template>

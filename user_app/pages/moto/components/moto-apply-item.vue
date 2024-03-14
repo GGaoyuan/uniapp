@@ -116,16 +116,16 @@
 
 			// background-color: yellow;
 			.title-style {
-				font-size: 18px;
-				font-family: PingFangSC, PingFangSC-Medium;
-				font-weight: 600;
+				font-size: 40rpx;
+				font-family: PingFangSC-Medium;
+				font-weight: bold;
 				color: #222222;
 			}
 
 			.status-text {
-				font-size: 15px;
-				font-family: PingFangSC, PingFangSC-Medium;
-				font-weight: 400;
+				font-size: 30rpx;
+				font-family: PingFangSC-Medium;
+				font-weight: bold;
 			}
 		}
 
@@ -149,9 +149,9 @@
 			margin-bottom: 12rpx;
 
 			.item-title {
-				font-size: 24rpx;
-				font-family: PingFangSC, PingFangSC-Regular;
-				font-weight: 400;
+				font-size: 32rpx;
+				font-family: PingFangSC-Regular;
+				font-weight: normal;
 				color: #222222;
 				word-break: keep-all;
 			}
@@ -166,9 +166,9 @@
 				word-break: break-all;
 				// word-wrap: break-word;
 				// margin-right: 50rpx;
-				font-size: 24rpx;
-				font-family: PingFangSC, PingFangSC-Regular;
-				font-weight: 400;
+				font-size: 32rpx;
+				font-family: PingFangSC-Regular;
+				font-weight: normal;
 				color: #999999;
 			}
 

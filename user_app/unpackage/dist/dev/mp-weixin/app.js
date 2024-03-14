@@ -8,6 +8,9 @@ if (!Math) {
   "./pages/regist/components/regist-userinfo.js";
 }
 const _sfc_main = {
+  // globalData: {
+  // 	text: 'text'
+  // },
   onLaunch: function() {
     console.log("App Launch");
   },

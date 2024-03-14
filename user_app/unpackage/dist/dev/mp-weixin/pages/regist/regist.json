@@ -3,6 +3,7 @@
   "enablePullDownRefresh": false,
   "usingComponents": {
     "title-header": "./components/regist-header",
-    "userinfo": "./components/regist-userinfo"
+    "userinfo": "./components/regist-userinfo",
+    "carinfo": "./components/regist-carinfo"
   }
 }

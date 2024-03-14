@@ -4,8 +4,11 @@
 		onReady,
 		onShareAppMessage
 	} from "@dcloudio/uni-app";
-	
+
 	export default {
+		// globalData: {
+		// 	text: 'text'
+		// },
 		onLaunch: function() {
 			console.log('App Launch')
 		},
@@ -23,6 +26,6 @@
 	.appBlueColor {
 		/* color: #3D77F0  蓝色*/
 		/* color: #222222; 黑色 */
-		/* #999999  灰色 */	
+		/* #999999  灰色 */
 	}
 </style>
