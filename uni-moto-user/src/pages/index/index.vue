@@ -1,3 +1,21 @@
+<script setup lang="ts">
+import { ref } from "vue";
+import { onLoad } from "@dcloudio/uni-app";
+const title = ref("Hello");
+
+import jsonData from "@/static/data/my.json";
+
+onLoad((option) => {
+  console.log("script:onLoad");
+
+  // 使用json数据
+  
+  
+  const resArr = jsonData.list;
+  console.log(resArr);
+});
+</script>
+
 <template>
   <view class="content">
     <image class="logo" src="/static/logo.png" />
@@ -7,12 +25,7 @@
   </view>
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue'
-const title = ref('Hello')
-</script>
-
-<style>
+<style lang="scss">
 .content {
   display: flex;
   flex-direction: column;
