@@ -2,9 +2,9 @@
   "pages": [
     //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
     {
-      "path": "pages/moto/moto",
+      "path": "pages/motor/motor",
       "style": {
-        "navigationBarTitleText": "moto"
+        "navigationBarTitleText": "motor"
       }
     },
     {
@@ -26,7 +26,7 @@
         "backgroundColor" : "#ffffff",
         "list" : [
             {
-                "pagePath" : "pages/moto/moto",
+                "pagePath" : "pages/motor/motor",
                 "iconPath" : "static/image/tabbar_icon.png",
                 "selectedIconPath" : "static/image/tabbar_icon_sel.png",
                 "text" : "车辆"
