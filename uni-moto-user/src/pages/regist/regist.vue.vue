@@ -10,21 +10,29 @@
 	import userinfo from "@/pages/regist/components/regist-userinfo.vue"
 	import carinfo from "@/pages/regist/components/regist-carinfo.vue"
 	
-	let userinfoTitle = "用户信息";
-	let carinfoTitle = "车辆信息";
+	
+  let headerTitle = {
+    userinfo: "用户信息",
+    carinfo: "车辆信息",
+    purchaseRecord: ref("购买记录"),
+    motorPics: ref("车辆照片"),
+  };
+
 </script>
 
 <template>
 	<view class="container">
-		<titleHeader :title="userinfoTitle"></titleHeader>
+		<titleHeader :title="headerTitle.userinfo"></titleHeader>
 			
 		<userinfo></userinfo>
 		
-		<titleHeader :title="carinfoTitle"></titleHeader>
+		<titleHeader :title="headerTitle.carinfo"></titleHeader>
 
 		<carinfo></carinfo>
 		
-		
+		<titleHeader :title="headerTitle.purchaseRecord.value"></titleHeader>
+    
+    <titleHeader :title="headerTitle.motorPics.value"></titleHeader>
 
 	</view>
 </template>

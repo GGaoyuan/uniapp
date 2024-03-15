@@ -19,7 +19,7 @@
 		margin-left: 40rpx;
 		margin-right: 40rpx;
 		margin-top: 20rpx;
-		margin-bottom: 20rpx;
+		margin-bottom: 10rpx;
 	}
 
 	.line {
