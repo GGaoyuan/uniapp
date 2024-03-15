@@ -35,7 +35,6 @@ function loadList() {
 
       dataSource.value.push(model);
     }
-    console.log("dataSource:" + dataSource);
     uni.hideLoading();
     console.log("loadList complete");
   }, 500);
@@ -43,7 +42,7 @@ function loadList() {
 
 function registAction() {
   uni.navigateTo({
-    url: "../regist/regist",
+    url: "../regist/regist.vue",
   });
   //console.log("registAction");
 }
@@ -137,4 +136,3 @@ function registAction() {
   }
 }
 </style>
-@/pages/motor/moto-apply-interface
