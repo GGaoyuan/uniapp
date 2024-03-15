@@ -21,7 +21,7 @@
     "skipLibCheck": true,
     "allowJs": true,
     "lib": ["esnext", "dom"],
-    "types": ["@dcloudio/types"],
+    "types": ["@dcloudio/uni-ui"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
