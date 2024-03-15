@@ -2,8 +2,8 @@
 import { ref } from "vue";
 import { onLoad } from "@dcloudio/uni-app";
 const title = ref("Hello");
-
-import jsonData from "@/static/data/my.json";
+let a = false;
+import jsonData from "../../static/data/my.json";
 
 onLoad((option) => {
   console.log("script:onLoad");
@@ -19,7 +19,7 @@ onLoad((option) => {
 <template>
   <view class="content">
     <image class="logo" src="/static/logo.png" />
-    <view class="text-area">
+    <view class="text-area" v-if="a">
       <text class="title">{{ title }}</text>
     </view>
   </view>

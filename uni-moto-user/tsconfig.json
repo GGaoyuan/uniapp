@@ -1,13 +1,62 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
+    "noImplicitAny": false,
+    "target": "esnext",
+    "module": "esnext",
+    "strict": false,
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
     "sourceMap": true,
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "useDefineForClassFields": true,
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "declarationMap": true,
+    "downlevelIteration": true, // 是否允许TS使用实验性功能迭代器
+    "removeComments": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "lib": ["esnext", "dom"],
+    "types": ["@dcloudio/types"],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
-    },
-    "lib": ["esnext", "dom"],
-    "types": ["@dcloudio/types"]
+      "@/*": ["src/*"]
+    }
   },
+  "exclude": ["node_modules", "unpackage", "src/**/*.nvue"],
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
+
+// tsconfig.json
+// {
+//   "compilerOptions": {
+//     "target": "esnext",
+//     "module": "esnext",
+//     "strict": true,
+//     "jsx": "preserve",
+//     "moduleResolution": "node",
+//     "esModuleInterop": true,
+//     "sourceMap": true,
+//     "skipLibCheck": true,
+//     "importHelpers": true,
+//     "allowSyntheticDefaultImports": true,
+//     "useDefineForClassFields": true,
+//     "resolveJsonModule": true,
+//     "lib": [
+//       "esnext",
+//       "dom"
+//     ],
+//     "types": [
+//       "@dcloudio/types"
+//     ]
+//   },
+//   "exclude": [
+//     "node_modules",
+//     "unpackage",
+//     "src/**/*.nvue"
+//   ]
+// }
