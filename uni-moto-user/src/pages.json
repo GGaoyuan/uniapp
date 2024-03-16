@@ -18,18 +18,6 @@
 			"style": {
 				"navigationBarTitleText": "regist.vue"
 			}
-		},
-		{
-			"path": "pages/regist/components/regist-userinfo",
-			"style": {
-				"navigationBarTitleText": "regist-userinfo"
-			}
-		},
-		{
-			"path": "pages/regist/components/regist-header",
-			"style": {
-				"navigationBarTitleText": "regist-header"
-			}
 		}
 	],
 	"globalStyle": {

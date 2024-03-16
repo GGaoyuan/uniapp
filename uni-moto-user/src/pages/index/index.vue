@@ -14,41 +14,110 @@ onLoad((option) => {
   const resArr = jsonData.list;
   console.log(resArr);
 });
+
+function change() {
+
+}
+
 </script>
 
-<template>
-  <view class="content">
-    <image class="logo" src="/static/logo.png" />
-    <view class="text-area" v-if="a">
-      <text class="title">{{ title }}</text>
-    </view>
+<template >
+  <view class="warp">
+			<uni-grid :column="4" border-color="#03a9f4" @change="change">
+				<uni-grid-item :index="0">
+					<view class="grid-item-box">
+						<text class="text">文本信息</text>
+					</view>
+				</uni-grid-item>
+				<uni-grid-item :index="1">
+					<view class="grid-item-box">
+						<text class="text">文本信息</text>
+					</view>
+				</uni-grid-item>
+				<uni-grid-item :index="2">
+					<view class="grid-item-box">
+						<text class="text">文本信息</text>
+					</view>
+				</uni-grid-item>
+				<uni-grid-item :index="3">
+					<view class="grid-item-box">
+						<text class="text">文本信息</text>
+					</view>
+				</uni-grid-item>
+			</uni-grid>
   </view>
 </template>
 
+
+
 <style lang="scss">
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+	.image {
+		width: 25px;
+		height: 25px;
+	}
 
-.logo {
-  height: 200rpx;
-  width: 200rpx;
-  margin-top: 300rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
-}
+	.text {
+		font-size: 14px;
+		margin-top: 5px;
+	}
 
-.text-area {
-  display: flex;
-  justify-content: center;
-}
+	.example-body {
+		/* #ifndef APP-NVUE */
+		// display: block;
+		/* #endif */
+	}
 
-.title {
-  font-size: 36rpx;
-  color: #8f8f94;
-}
+	.grid-dynamic-box {
+		margin-bottom: 15px;
+	}
+
+	.grid-item-box {
+		flex: 1;
+		// position: relative;
+		/* #ifndef APP-NVUE */
+		display: flex;
+		/* #endif */
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 15px 0;
+	}
+
+	.grid-item-box-row {
+		flex: 1;
+		// position: relative;
+		/* #ifndef APP-NVUE */
+		display: flex;
+		/* #endif */
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		padding: 15px 0;
+	}
+
+	.grid-dot {
+		position: absolute;
+		top: 5px;
+		right: 15px;
+	}
+
+	.swiper {
+		height: 420px;
+	}
+
+	/* #ifdef H5 */
+	@media screen and (min-width: 768px) and (max-width: 1425px) {
+		.swiper {
+			height: 630px;
+		}
+	}
+
+	@media screen and (min-width: 1425px) {
+		.swiper {
+			height: 830px;
+		}
+	}
+
+	/* #endif */
 </style>
+

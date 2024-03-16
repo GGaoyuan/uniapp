@@ -25,14 +25,14 @@ function change() {
     <view class="regist-info-context">
       <text>车辆类型</text>
       <uni-data-checkbox
-      style="background-color: red; justify-content: flex-end;"
+        class="test"
         v-model="motorTypeValue"
         :localdata="motorTypes"
         @change="change"
       ></uni-data-checkbox>
     </view>
     <view class="regist-info-context">
-      <text>车辆品牌1111</text>
+      <text>车辆品牌21122</text>
       <input
         placeholder="请输入车辆品牌"
         style="background-color: red; text-align: right"
@@ -47,4 +47,12 @@ function change() {
 
 <style scoped lang="scss">
 @import "../components/css/regist-info.css";
+</style>
+
+<style scoped>
+ .test /deep/ .checklist-box {
+  background-color: green;
+  margin-right: 0rpx;
+  margin-left: 25rpx;
+}
 </style>
