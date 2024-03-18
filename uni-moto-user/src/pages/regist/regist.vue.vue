@@ -16,7 +16,7 @@ let headerTitle = {
 const carinfoRef = ref();
 function registAction() {
   console.log("registAction");
-
+  
   console.log("carinfoRef:" + carinfoRef.value.motorBrand);
   console.log("carinfoRef:" + carinfoRef.value.motorColor);
 }
