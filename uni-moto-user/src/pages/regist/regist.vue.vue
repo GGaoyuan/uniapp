@@ -7,8 +7,8 @@ import carinfo from "@/pages/regist/components/regist-carinfo.vue";
 import imageGrid from "@/pages/regist/components/regist-image-grid.vue";
 
 let headerTitle = {
-  userinfo: "用户信息",
-  carinfo: "车辆信息",
+  userinfo: "用户信息11",
+  carinfo: "车辆信息12",
   purchaseRecord: ref("购买记录"),
   motorPics: ref("车辆照片"),
 };
@@ -16,8 +16,6 @@ let headerTitle = {
 
 function registAction() {
   console.log("registAction");
-
-  carinfo.expose.values
 }
 </script>
 
