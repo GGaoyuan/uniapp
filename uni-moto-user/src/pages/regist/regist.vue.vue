@@ -26,11 +26,11 @@ let headerTitle = {
 
     <titleHeader :title="headerTitle.purchaseRecord.value"></titleHeader>
 
-    <imageGrid></imageGrid>
+    <imageGrid :max-count="2"></imageGrid>
 	
     <titleHeader :title="headerTitle.motorPics.value"></titleHeader>
 
-    <imageGrid></imageGrid>
+    <imageGrid :max-count="4"></imageGrid>
   </view>
 </template>
 
