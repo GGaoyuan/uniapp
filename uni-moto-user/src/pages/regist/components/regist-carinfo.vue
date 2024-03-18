@@ -5,7 +5,7 @@ const props = defineProps({
   title: String,
 });
 
-const motorTypes = [
+const motorTypeList = [
   {
     text: "电动车",
     value: 0,
@@ -14,19 +14,19 @@ const motorTypes = [
     text: "自行车",
     value: 1,
   },
-];
-let motorTypeValue = 0;
+]
 const motorBrand = ref();
 const motorColor = ref();
-
+const motorType = ref(0);
 defineExpose({
-  motorTypeValue,
+  motorType,
   motorBrand,
   motorColor,
 });
 
 function change() {
   console.log("change");
+  console.log("motorType:" + motorType.value);
   console.log("motorBrand:" + motorBrand.value);
   console.log("motorColor:" + motorColor.value);
 }
@@ -38,8 +38,8 @@ function change() {
       <text>车辆类型</text>
       <uni-data-checkbox
         class="test"
-        v-model="motorTypeValue"
-        :localdata="motorTypes"
+        v-model="motorType"
+        :localdata="motorTypeList"
         @change="change"
       ></uni-data-checkbox>
     </view>
