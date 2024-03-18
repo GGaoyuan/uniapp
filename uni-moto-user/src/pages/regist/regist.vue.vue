@@ -12,6 +12,11 @@ let headerTitle = {
   purchaseRecord: ref("购买记录"),
   motorPics: ref("车辆照片"),
 };
+
+
+function registAction() {
+  console.log("registAction");
+}
 </script>
 
 <template>
@@ -31,6 +36,10 @@ let headerTitle = {
     <titleHeader :title="headerTitle.motorPics.value"></titleHeader>
 
     <imageGrid :max-count="4"></imageGrid>
+
+    <view class="regist-button" @click="registAction()">
+        <text>注册车辆信息</text>
+      </view>
   </view>
 </template>
 
@@ -50,4 +59,21 @@ let headerTitle = {
   height: 200rpx;
   background-color: black;
 }
+
+.regist-button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50rpx;
+    margin-left: 50rpx;
+    margin-right: 50rpx;
+    background-color: #3d77f0;
+    color: #fff;
+    height: 80rpx;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 1rpx solid #3d77f0;
+    border-radius: 20rpx;
+    z-index: 99;
+  }
 </style>
