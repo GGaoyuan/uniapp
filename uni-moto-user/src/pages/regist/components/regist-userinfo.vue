@@ -18,6 +18,8 @@
 	function change() {
 		console.log("change");
 	}
+
+  
 </script>
 
 <template>

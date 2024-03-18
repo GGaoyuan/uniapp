@@ -38,7 +38,7 @@ function registAction() {
     <imageGrid :max-count="4"></imageGrid>
 
     <view class="regist-button" @click="registAction()">
-        <text>注册车辆信息</text>
+        <text>提交</text>
       </view>
   </view>
 </template>
