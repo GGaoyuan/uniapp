@@ -1,14 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const props = defineProps({
   title: String,
-});
-
-defineExpose(()=>{
-  motorTypeValue;
-  motorBrand;
-  motorColor;
 });
 
 const motorTypes = [
@@ -25,12 +19,17 @@ let motorTypeValue = 0;
 const motorBrand = ref();
 const motorColor = ref();
 
+defineExpose({
+  motorTypeValue,
+  motorBrand,
+  motorColor,
+});
+
 function change() {
   console.log("change");
   console.log("motorBrand:" + motorBrand.value);
   console.log("motorColor:" + motorColor.value);
 }
-
 </script>
 
 <template>
@@ -64,7 +63,7 @@ function change() {
 </style>
 
 <style scoped>
- .test /deep/ .checklist-box {
+.test /deep/ .checklist-box {
   background-color: green;
   margin-right: 0rpx;
   margin-left: 25rpx;
