@@ -13,9 +13,12 @@ let headerTitle = {
   motorPics: ref("车辆照片"),
 };
 
+const carinfoRef = ref();
 
 function registAction() {
   console.log("registAction");
+
+  console.log("carinfoRef:" + carinfoRef.value.motorBrand.value);
 }
 </script>
 
@@ -27,7 +30,7 @@ function registAction() {
 
     <titleHeader :title="headerTitle.carinfo"></titleHeader>
 
-    <carinfo></carinfo>
+    <carinfo ref="carinfoRef"></carinfo>
 
     <titleHeader :title="headerTitle.purchaseRecord.value"></titleHeader>
 

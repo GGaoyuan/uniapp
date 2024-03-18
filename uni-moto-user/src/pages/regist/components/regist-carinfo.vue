@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
 const props = defineProps({
   title: String,
 });
@@ -20,11 +22,13 @@ const motorTypes = [
   },
 ];
 let motorTypeValue = 0;
-const motorBrand = defineModel();
-const motorColor = defineModel();
+const motorBrand = ref();
+const motorColor = ref();
 
 function change() {
   console.log("change");
+  console.log("motorBrand:" + motorBrand.value);
+  console.log("motorColor:" + motorColor.value);
 }
 
 </script>
