@@ -3,6 +3,12 @@ const props = defineProps({
   title: String,
 });
 
+defineExpose(()=>{
+  motorTypeValue;
+  motorBrand;
+  motorColor;
+});
+
 const motorTypes = [
   {
     text: "电动车",
@@ -14,10 +20,13 @@ const motorTypes = [
   },
 ];
 let motorTypeValue = 0;
+const motorBrand = defineModel();
+const motorColor = defineModel();
 
 function change() {
   console.log("change");
 }
+
 </script>
 
 <template>
@@ -34,13 +43,14 @@ function change() {
     <view class="regist-info-context">
       <text>车辆品牌21122</text>
       <input
+        v-model="motorBrand"
         placeholder="请输入车辆品牌"
         style="background-color: red; text-align: right"
       />
     </view>
     <view class="regist-info-context">
       <text>车辆颜色</text>
-      <input placeholder="请输入车辆颜色" />
+      <input v-model="motorColor" placeholder="请输入车辆颜色" />
     </view>
   </view>
 </template>

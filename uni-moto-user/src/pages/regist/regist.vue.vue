@@ -16,6 +16,8 @@ let headerTitle = {
 
 function registAction() {
   console.log("registAction");
+
+  carinfo.expose.values
 }
 </script>
 
