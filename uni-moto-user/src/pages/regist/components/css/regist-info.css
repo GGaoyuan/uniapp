@@ -23,12 +23,4 @@
 }
 
 
-.textField {
-  display: flex;
-  flex-direction: row;
-  margin-left: 30rpx;
-  margin-right: 30rpx;
-  padding-top: 10rpx;
-  padding-bottom: 10rpx;
-  justify-content: space-between;
-}
+

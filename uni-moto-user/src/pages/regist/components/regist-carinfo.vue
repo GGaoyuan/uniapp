@@ -5,6 +5,9 @@ const props = defineProps({
   title: String,
 });
 
+const emits = defineEmits(
+  ['addImage'])// 定义一个或多个自定义事件
+
 const motorTypeList = [
   {
     text: "电动车",
@@ -29,6 +32,7 @@ function change() {
   console.log("motorType:" + motorType.value);
   console.log("motorBrand:" + motorBrand.value);
   console.log("motorColor:" + motorColor.value);
+  emits('addImage', 20);
 }
 </script>
 
@@ -44,11 +48,10 @@ function change() {
       ></uni-data-checkbox>
     </view>
     <view class="regist-info-context">
-      <text>车辆品牌21122</text>
+      <text>车辆品牌</text>
       <input
         v-model="motorBrand"
         placeholder="请输入车辆品牌"
-        style="background-color: red; text-align: right"
       />
     </view>
     <view class="regist-info-context">
