@@ -5,6 +5,8 @@ const props = defineProps({
   maxCount: Number,
 });
 
+const emits = defineEmits(["addImages"]);
+
 interface ItemModel {
   isAdd: boolean;
   url: string;
@@ -13,6 +15,10 @@ const addItem: ItemModel = {
   isAdd: true,
   url: "",
 };
+
+onMounted(() => {
+  callbackImageNum()
+});
 
 let dataList = ref<ItemModel[]>([addItem]);
 
@@ -69,6 +75,13 @@ function checkAddImageItem() {
   if (dataList.value.length < props.maxCount) {
     dataList.value.push(addItem);
   }
+  callbackImageNum();
+}
+
+function callbackImageNum() {
+  let num = dataList.value.filter((i) => i.isAdd == false).length
+  const result = `${num}/${props.maxCount}`;
+  emits("addImages", result);
 }
 </script>
 

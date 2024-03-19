@@ -6,19 +6,21 @@ import userinfo from "@/pages/regist/components/regist-userinfo.vue";
 import carinfo from "@/pages/regist/components/regist-carinfo.vue";
 import imageGrid from "@/pages/regist/components/regist-image-grid.vue";
 
-let headerTitle = {
-  userinfo: "用户信息11",
-  carinfo: "车辆信息12",
-  purchaseRecord: ref("购买记录"),
-  motorPics: ref("车辆照片"),
-};
-
+const titles = ref({
+  userinfo: "用户信息",
+  carinfo: "车辆信息",
+  purchaseRecord: "购买记录",
+  motorPics: "车辆照片",
+});
 const userinfoRef = ref(null);
 const carinfoRef = ref();
 
-const testaaa = (pram: number) => {
-     console.log("addImage", pram)
-  };
+const addPurchaseImageCallback = (params: string) => {
+  titles.value.purchaseRecord = `购买记录(${params})`
+};
+const addMotorImageCallback = (params: string) => {
+  titles.value.motorPics = `车辆照片(${params})`
+};
 
 function registAction() {
   console.log("registAction");
@@ -41,11 +43,11 @@ function registAction() {
 
   console.log(
     "motorType:",
-      carinfoRef.value.motorType,
-      "motorBrand:",
-      carinfoRef.value.motorBrand,
-      "motorColor:",
-      carinfoRef.value.motorColor
+    carinfoRef.value.motorType,
+    "motorBrand:",
+    carinfoRef.value.motorBrand,
+    "motorColor:",
+    carinfoRef.value.motorColor
   );
   return;
   uni.showLoading({
@@ -105,21 +107,21 @@ function registAction() {
 
 <template>
   <view class="container">
-    <titleHeader :title="headerTitle.userinfo"></titleHeader>
+    <titleHeader :title="titles.userinfo"></titleHeader>
 
     <userinfo ref="userinfoRef"></userinfo>
 
-    <titleHeader :title="headerTitle.carinfo"></titleHeader>
+    <titleHeader :title="titles.carinfo"></titleHeader>
 
-    <carinfo ref="carinfoRef" @addImage="testaaa"></carinfo>
+    <carinfo ref="carinfoRef"></carinfo>
 
-    <titleHeader :title="headerTitle.purchaseRecord.value"></titleHeader>
+    <titleHeader :title="titles.purchaseRecord"></titleHeader>
 
-    <imageGrid :max-count="2"></imageGrid>
+    <imageGrid :max-count="2" @addImages="addPurchaseImageCallback"></imageGrid>
 
-    <titleHeader :title="headerTitle.motorPics.value"></titleHeader>
+    <titleHeader :title="titles.motorPics"></titleHeader>
 
-    <imageGrid :max-count="4"></imageGrid>
+    <imageGrid :max-count="4" @addImages="addMotorImageCallback"></imageGrid>
 
     <view class="regist-button" @click="registAction()">
       <text>提交</text>
