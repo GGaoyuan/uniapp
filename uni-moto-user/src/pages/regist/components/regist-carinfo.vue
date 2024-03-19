@@ -25,10 +25,7 @@ defineExpose({
 });
 
 function change() {
-  console.log("change");
-  console.log("motorType:" + motorType.value);
-  console.log("motorBrand:" + motorBrand.value);
-  console.log("motorColor:" + motorColor.value);
+  console.log(motorType.value);
 }
 </script>
 
