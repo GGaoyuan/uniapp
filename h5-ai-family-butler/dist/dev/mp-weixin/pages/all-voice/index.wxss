@@ -1,0 +1,102 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.voice-container.data-v-9014b63b {
+  padding-bottom: 241.54rpx;
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+.voice-container .voice-list.data-v-9014b63b {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 48rpx;
+}
+.voice-container .voice-list .voice-box.data-v-9014b63b {
+  margin-top: 38rpx;
+  width: 192.31rpx;
+}
+.voice-container .voice-list .voice-box .box-img.data-v-9014b63b {
+  position: relative;
+  border-radius: 26.92rpx;
+  width: 192.31rpx;
+  height: 192.31rpx;
+  background: #d6d6d6;
+}
+.voice-container .voice-list .voice-box .box-img .box-icon.data-v-9014b63b {
+  position: absolute;
+  left: 19.23rpx;
+  bottom: 19.23rpx;
+  width: 61.54rpx;
+  height: 61.54rpx;
+}
+.voice-container .voice-list .voice-box .box-img .select-icon.data-v-9014b63b {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 57.69rpx;
+  height: 57.69rpx;
+}
+.voice-container .voice-list .voice-box .box-img image.data-v-9014b63b {
+  width: 100%;
+  height: 100%;
+}
+.voice-container .voice-list.data-v-9014b63b::after {
+  width: 192.31rpx;
+  content: "";
+}
+.voice-container .progress-box .stop-icon.data-v-9014b63b {
+  margin: auto;
+  width: 61.54rpx;
+  height: 61.54rpx;
+}
+.voice-container .progress-box .stop-icon image.data-v-9014b63b {
+  width: 100%;
+  height: 100%;
+}
+.voice-container .bottom-box.data-v-9014b63b {
+  position: fixed;
+  bottom: 0;
+  box-sizing: border-box;
+  padding-top: 57rpx;
+  width: 100%;
+  height: 211.54rpx;
+  background: #fff;
+}
+.voice-container .bottom-box .add-button.data-v-9014b63b {
+  margin: 0 auto;
+  border-radius: 48.08rpx;
+  width: 423.08rpx;
+  height: 96.15rpx;
+  background: #7079ff;
+  line-height: 96.15rpx;
+  text-align: center;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  font-size: 38.46rpx;
+  color: #fff;
+}

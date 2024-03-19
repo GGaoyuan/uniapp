@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/first-guide/index",
+    "pages/main/index",
+    "pages/remind/index",
+    "pages/remind/detail",
+    "pages/profile/index",
+    "pages/my-family/index",
+    "pages/user-info/index",
+    "pages/all-voice/index",
+    "pages/all-video/index",
+    "pages/guide/index",
+    "pages/feedback/index",
+    "pages/member-benefits/index",
+    "pages/migu-pay/index",
+    "pages/activity-page/index",
+    "pages/activity-share-page/index",
+    "pages/activity-h5-page/index"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/test",
+      "pages": [
+        "test"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "亲情管家",
+    "navigationBarBackgroundColor": "#FFF",
+    "backgroundColor": "#F8F8F8"
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "plugins": {
+    "myPlugin": {
+      "provider": "wx80b5f24d05ef8e63",
+      "version": "1.0.29",
+      "genericsImplementation": {
+        "migulogin": {
+          "login-logo": "components/loginLogo"
+        }
+      }
+    }
+  },
+  "usingComponents": {}
+}

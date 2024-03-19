@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "记录提醒",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "schedule": "../../components/schedule/index",
+    "nav-bar": "../../components/nav-bar/index"
+  }
+}

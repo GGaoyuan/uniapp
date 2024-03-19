@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": false,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "emitDecoratorMetadata":true,
+    "experimentalDecorators":true,
+    "declaration":true,
+    "declarationMap": true,
+    "downlevelIteration":true,      // 是否允许TS使用实验性功能迭代器
+    "removeComments": true,
+    "skipLibCheck":true,
+    "allowJs": true,
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "lib": ["esnext", "dom"],
+    "types": ["@dcloudio/types", "@uni-helper/uni-app-types",
+    "@uni-helper/uni-ui-types","pinia-plugin-persist-uni"]
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue"]
+}

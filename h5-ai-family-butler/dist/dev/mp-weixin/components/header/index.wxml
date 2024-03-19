@@ -1,0 +1,1 @@
+<view class="header-contianer data-v-3d2ca96a"><view class="header-back-img data-v-3d2ca96a" bindtap="{{a}}"><image class="data-v-3d2ca96a" src="https://ivr.migu.cn/ai-family-butler/static/butler/picture/static/images/header-back.png"></image></view><label class="header-title data-v-3d2ca96a">{{b}}</label></view>

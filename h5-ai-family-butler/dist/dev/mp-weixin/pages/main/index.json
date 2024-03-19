@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "首页",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "message-list": "../../components/message/message-list",
+    "message-select-tips-popup": "../../components/message/message-selectTips-popup",
+    "input-box": "../../components/input/input-box",
+    "reminder-set": "../../components/reminderSet",
+    "login": "../../components/login/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "个人信息",
+  "usingComponents": {
+    "edit-header": "../../components/edit-header/index",
+    "select-sex": "../../components/selectSex/index"
+  }
+}

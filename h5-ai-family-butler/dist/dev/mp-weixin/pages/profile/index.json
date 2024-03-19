@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "个人设置",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "myPlugin": "plugin://myPlugin/migulogin",
+    "uni-popup": "../../node-modules/@dcloudio/uni-ui/lib/uni-popup/uni-popup",
+    "login": "../../components/login/index",
+    "header": "../../components/header/index"
+  }
+}

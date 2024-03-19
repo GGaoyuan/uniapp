@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "活动首页",
+  "usingComponents": {
+    "login": "../../components/login/index"
+  }
+}

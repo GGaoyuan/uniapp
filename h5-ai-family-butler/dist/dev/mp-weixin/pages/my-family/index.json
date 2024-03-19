@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的家庭成员",
+  "usingComponents": {
+    "character": "../../components/character/index",
+    "select-sex": "../../components/selectSex/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "新手指导",
+  "usingComponents": {
+    "uni-collapse-item": "../../uni_modules/uni-collapse/components/uni-collapse-item/uni-collapse-item",
+    "uni-collapse": "../../uni_modules/uni-collapse/components/uni-collapse/uni-collapse"
+  }
+}

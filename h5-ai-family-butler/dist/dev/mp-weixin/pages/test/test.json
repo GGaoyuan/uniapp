@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "测试",
+  "usingComponents": {
+    "pull-list": "../../components/pullList"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "视频特效发音",
+  "usingComponents": {
+    "l-circle": "../../uni_modules/lime-circle/components/l-circle/l-circle"
+  }
+}
