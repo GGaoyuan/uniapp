@@ -7,6 +7,8 @@ onMounted(() => {
   // const res = await wx.login()
   // code = res.code
 
+// https://megasu.gitee.io/uni-app-shop-note/rabbit-shop/login.html
+// https://blog.csdn.net/lijiahui_/article/details/123102802
   uni.login({
     provider: "weixin",
     onlyAuthorize: true, // 微信登录仅请求授权认证
@@ -20,7 +22,7 @@ onMounted(() => {
           // 获取用户信息成功, info.authResult保存用户信息
         },
       });
-      
+
       // uni.request({
       //     url: 'https://www.example.com/loginByWeixin', //仅为示例，并非真实接口地址。
       //     data: {

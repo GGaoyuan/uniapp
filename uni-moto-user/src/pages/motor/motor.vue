@@ -49,7 +49,7 @@ function loadList() {
 
 function registAction() {
   uni.navigateTo({
-    url: "../login/login",
+    url: "../regist/regist",
   });
   //console.log("registAction");
 }
