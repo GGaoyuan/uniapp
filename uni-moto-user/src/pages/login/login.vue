@@ -20,6 +20,7 @@ onMounted(() => {
           // 获取用户信息成功, info.authResult保存用户信息
         },
       });
+      
       // uni.request({
       //     url: 'https://www.example.com/loginByWeixin', //仅为示例，并非真实接口地址。
       //     data: {

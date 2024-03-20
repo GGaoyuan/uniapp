@@ -3,14 +3,19 @@ import { ref, onMounted } from "vue";
 import motorItem from "@/pages/motor/components/motor-item.vue";
 import jsonData from "../../static/data/my.json";
 import { ApplyInfo } from "@/pages/motor/motor-apply-interface";
-import login from "@/pages/login/login.vue";
 
 let isLogin = ref(false);
 let dataSource = ref<ApplyInfo[]>([]);
 let dataLoaded = ref(false);
 
 onMounted(() => {
-  loadList();
+  if (!isLogin.value) {
+    uni.navigateTo({
+      url: "../login/login",
+    });
+  } else {
+    loadList();
+  }
 });
 
 function loadList() {
@@ -44,7 +49,7 @@ function loadList() {
 
 function registAction() {
   uni.navigateTo({
-    url: "../regist/regist.vue",
+    url: "../login/login",
   });
   //console.log("registAction");
 }
@@ -52,7 +57,6 @@ function registAction() {
 
 <template>
   <view>
-    <view v-if="isLogin == true">
       <view v-if="dataSource.length == 0 && dataLoaded" class="no-data">
         <image class="no-data-image" src="/static/logo.png"></image>
         <text class="no-data-title">空的</text>
@@ -78,10 +82,6 @@ function registAction() {
         </scroll-view>
       </view>
     </view>
-    <view v-if="isLogin == false">
-      <login></login>
-    </view>
-  </view>
 </template>
 
 <style lang="scss" scoped>

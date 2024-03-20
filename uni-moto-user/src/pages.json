@@ -8,21 +8,21 @@
       }
     },
     {
+      "path": "pages/login/login",
+      "style": {
+        "navigationBarTitleText": "login"
+      }
+    },
+    {
+      "path": "pages/regist/regist",
+      "style": {
+        "navigationBarTitleText": "regist"
+      }
+    },
+    {
       "path": "pages/index/index",
       "style": {
         "navigationBarTitleText": "uni-app"
-      }
-    },
-    {
-      "path": "pages/regist/regist.vue",
-      "style": {
-        "navigationBarTitleText": "regist.vue"
-      }
-    },
-    {
-      "path": "pages/login/login.vue",
-      "style": {
-        "navigationBarTitleText": "登录"
       }
     }
   ],
