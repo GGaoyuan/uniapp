@@ -140,4 +140,4 @@ onMounted(() => {});
     }
   }
 }
-</style>@/pages/motor/moto-apply-interface
+</style>

@@ -3,7 +3,9 @@ import { ref, onMounted } from "vue";
 import motorItem from "@/pages/motor/components/motor-item.vue";
 import jsonData from "../../static/data/my.json";
 import { ApplyInfo } from "@/pages/motor/motor-apply-interface";
+import login from "@/pages/login/login.vue";
 
+let isLogin = ref(false);
 let dataSource = ref<ApplyInfo[]>([]);
 let dataLoaded = ref(false);
 
@@ -50,29 +52,34 @@ function registAction() {
 
 <template>
   <view>
-    <view v-if="dataSource.length == 0 && dataLoaded" class="no-data">
-      <image class="no-data-image" src="/static/logo.png"></image>
-      <text class="no-data-title">空的</text>
-    </view>
-
-    <view class="list" v-if="dataSource.length != 0 && dataLoaded">
-      <view class="regist-moto" @click="registAction()">
-        <text>注册车辆信息</text>
+    <view v-if="isLogin == true">
+      <view v-if="dataSource.length == 0 && dataLoaded" class="no-data">
+        <image class="no-data-image" src="/static/logo.png"></image>
+        <text class="no-data-title">空的</text>
       </view>
 
-      <scroll-view
-        class="list-content"
-        scroll-y
-        rebound="false"
-        enable-flex="true"
-      >
-        <motorItem
-          v-for="item in dataSource"
-          :key="item.id"
-          :data="item"
-        ></motorItem>
-        <view style="height: 150rpx"></view>
-      </scroll-view>
+      <view class="list" v-if="dataSource.length != 0 && dataLoaded">
+        <view class="regist-moto" @click="registAction()">
+          <text>注册车辆信息</text>
+        </view>
+
+        <scroll-view
+          class="list-content"
+          scroll-y
+          rebound="false"
+          enable-flex="true"
+        >
+          <motorItem
+            v-for="item in dataSource"
+            :key="item.id"
+            :data="item"
+          ></motorItem>
+          <view style="height: 150rpx"></view>
+        </scroll-view>
+      </view>
+    </view>
+    <view v-if="isLogin == false">
+      <login></login>
     </view>
   </view>
 </template>
