@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import uni from "@dcloudio/vite-plugin-uni";
+import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,5 +12,14 @@ export default defineConfig({
         additionalData: '@import "@/common/app.scss";',
       },
     },
+  },
+  resolve: {
+    // 设置文件./src路径为 @
+    alias: [
+      {
+        find: "@",
+        replacement: resolve(__dirname, "./src"),
+      },
+    ],
   },
 });
