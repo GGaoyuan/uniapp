@@ -153,7 +153,8 @@ function registAction() {
   margin-left: 50rpx;
   margin-right: 50rpx;
   margin-bottom: 30rpx;
-  background-color: #3d77f0;
+  // background-color: #3d77f0;
+  background-color: $test;
   color: #fff;
   height: 80rpx;
   text-align: center;

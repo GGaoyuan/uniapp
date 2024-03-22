@@ -63,7 +63,7 @@ function registAction() {
       </view>
 
       <view class="list" v-if="dataSource.length != 0 && dataLoaded">
-        <view class="regist-moto" @click="registAction()">
+        <view class="AAA" @click="registAction()">
           <text>注册车辆信息</text>
         </view>
 
@@ -85,6 +85,7 @@ function registAction() {
 </template>
 
 <style lang="scss" scoped>
+@import "../../static/style/common.scss";
 .list {
   display: flex;
   flex-direction: column;

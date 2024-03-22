@@ -9,7 +9,7 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         // 配置全局sass变量注入
-        additionalData: '@import "@/common/app.scss";',
+        additionalData: '@import "@/static/style/variable.scss";',
       },
     },
   },
